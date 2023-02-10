@@ -1,0 +1,1985 @@
+
+========================================================================
+
+** ELF Header Information
+
+    File Name: C:\Fiti_fw\Tcon\FTA8801\Fiti_M4F\PROJECT\Objects\peripherals_app.axf
+
+    Machine class: ELFCLASS32 (32-bit)
+    Data encoding: ELFDATA2LSB (Little endian)
+    Header version: EV_CURRENT (Current version)
+    Operating System ABI: none
+    ABI Version: 0
+    File Type: ET_EXEC (Executable) (2)
+    Machine: EM_ARM (ARM)
+
+    Image Entry point: 0x000003c1
+    Flags: EF_ARM_HASENTRY (0x05000002)
+
+    ARM ELF revision: 5 (ABI version 2)
+
+    Conforms to Base float procedure-call standard
+
+    Built with
+    Component: ARM Compiler 5.06 update 6 (build 750) Tool: armasm [4d35ec]
+    Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+    Header size: 52 bytes (0x34)
+    Program header entry size: 32 bytes (0x20)
+    Section header entry size: 40 bytes (0x28)
+
+    Program header entries: 1
+    Section header entries: 16
+
+    Program header offset: 227444 (0x00037874)
+    Section header offset: 227476 (0x00037894)
+
+    Section header string table index: 15
+
+========================================================================
+
+** Program header #0 (PT_LOAD) [PF_X + PF_W + PF_R + PF_ARM_ENTRY]
+    Size : 3568 bytes (2544 bytes in file)
+    Virtual address: 0x00000000 (Alignment 8)
+
+
+========================================================================
+
+** Section #1 'ER_IROM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_EXECINSTR]
+    Size   : 2536 bytes (alignment 4)
+    Address: 0x00000000
+
+    $d.realdata
+    RESET
+    __Vectors
+        0x00000000:    20000408    ...     DCD    536871944
+        0x00000004:    000003d5    ....    DCD    981
+        0x00000008:    000007ff    ....    DCD    2047
+        0x0000000c:    00000801    ....    DCD    2049
+        0x00000010:    00000803    ....    DCD    2051
+        0x00000014:    00000805    ....    DCD    2053
+        0x00000018:    00000807    ....    DCD    2055
+        0x0000001c:    00000000    ....    DCD    0
+        0x00000020:    00000000    ....    DCD    0
+        0x00000024:    00000000    ....    DCD    0
+        0x00000028:    00000000    ....    DCD    0
+        0x0000002c:    00000809    ....    DCD    2057
+        0x00000030:    0000080b    ....    DCD    2059
+        0x00000034:    00000000    ....    DCD    0
+        0x00000038:    0000080d    ....    DCD    2061
+        0x0000003c:    000003ed    ....    DCD    1005
+        0x00000040:    000003ef    ....    DCD    1007
+        0x00000044:    000003f1    ....    DCD    1009
+        0x00000048:    000003f3    ....    DCD    1011
+        0x0000004c:    000003f5    ....    DCD    1013
+        0x00000050:    000003f7    ....    DCD    1015
+        0x00000054:    000003f9    ....    DCD    1017
+        0x00000058:    000003fb    ....    DCD    1019
+        0x0000005c:    000003fd    ....    DCD    1021
+        0x00000060:    000003ff    ....    DCD    1023
+        0x00000064:    00000401    ....    DCD    1025
+        0x00000068:    00000000    ....    DCD    0
+        0x0000006c:    00000000    ....    DCD    0
+        0x00000070:    00000000    ....    DCD    0
+        0x00000074:    00000000    ....    DCD    0
+        0x00000078:    00000000    ....    DCD    0
+        0x0000007c:    00000000    ....    DCD    0
+        0x00000080:    00000000    ....    DCD    0
+        0x00000084:    00000000    ....    DCD    0
+        0x00000088:    00000000    ....    DCD    0
+        0x0000008c:    00000000    ....    DCD    0
+        0x00000090:    00000000    ....    DCD    0
+        0x00000094:    00000000    ....    DCD    0
+        0x00000098:    00000000    ....    DCD    0
+        0x0000009c:    00000000    ....    DCD    0
+        0x000000a0:    00000000    ....    DCD    0
+        0x000000a4:    00000000    ....    DCD    0
+        0x000000a8:    00000000    ....    DCD    0
+        0x000000ac:    00000000    ....    DCD    0
+        0x000000b0:    00000000    ....    DCD    0
+        0x000000b4:    00000000    ....    DCD    0
+        0x000000b8:    00000000    ....    DCD    0
+        0x000000bc:    00000000    ....    DCD    0
+        0x000000c0:    00000000    ....    DCD    0
+        0x000000c4:    00000000    ....    DCD    0
+        0x000000c8:    00000000    ....    DCD    0
+        0x000000cc:    00000000    ....    DCD    0
+        0x000000d0:    00000000    ....    DCD    0
+        0x000000d4:    00000000    ....    DCD    0
+        0x000000d8:    00000000    ....    DCD    0
+        0x000000dc:    00000000    ....    DCD    0
+        0x000000e0:    00000000    ....    DCD    0
+        0x000000e4:    00000000    ....    DCD    0
+        0x000000e8:    00000000    ....    DCD    0
+        0x000000ec:    00000000    ....    DCD    0
+        0x000000f0:    00000000    ....    DCD    0
+        0x000000f4:    00000000    ....    DCD    0
+        0x000000f8:    00000000    ....    DCD    0
+        0x000000fc:    00000000    ....    DCD    0
+        0x00000100:    00000000    ....    DCD    0
+        0x00000104:    00000000    ....    DCD    0
+        0x00000108:    00000000    ....    DCD    0
+        0x0000010c:    00000000    ....    DCD    0
+        0x00000110:    00000000    ....    DCD    0
+        0x00000114:    00000000    ....    DCD    0
+        0x00000118:    00000000    ....    DCD    0
+        0x0000011c:    00000000    ....    DCD    0
+        0x00000120:    00000000    ....    DCD    0
+        0x00000124:    00000000    ....    DCD    0
+        0x00000128:    00000000    ....    DCD    0
+        0x0000012c:    00000000    ....    DCD    0
+        0x00000130:    00000000    ....    DCD    0
+        0x00000134:    00000000    ....    DCD    0
+        0x00000138:    00000000    ....    DCD    0
+        0x0000013c:    00000000    ....    DCD    0
+        0x00000140:    00000000    ....    DCD    0
+        0x00000144:    00000000    ....    DCD    0
+        0x00000148:    00000000    ....    DCD    0
+        0x0000014c:    00000000    ....    DCD    0
+        0x00000150:    00000000    ....    DCD    0
+        0x00000154:    00000000    ....    DCD    0
+        0x00000158:    00000000    ....    DCD    0
+        0x0000015c:    00000000    ....    DCD    0
+        0x00000160:    00000000    ....    DCD    0
+        0x00000164:    00000000    ....    DCD    0
+        0x00000168:    00000000    ....    DCD    0
+        0x0000016c:    00000000    ....    DCD    0
+        0x00000170:    00000000    ....    DCD    0
+        0x00000174:    00000000    ....    DCD    0
+        0x00000178:    00000000    ....    DCD    0
+        0x0000017c:    00000000    ....    DCD    0
+        0x00000180:    00000000    ....    DCD    0
+        0x00000184:    00000000    ....    DCD    0
+        0x00000188:    00000000    ....    DCD    0
+        0x0000018c:    00000000    ....    DCD    0
+        0x00000190:    00000000    ....    DCD    0
+        0x00000194:    00000000    ....    DCD    0
+        0x00000198:    00000000    ....    DCD    0
+        0x0000019c:    00000000    ....    DCD    0
+        0x000001a0:    00000000    ....    DCD    0
+        0x000001a4:    00000000    ....    DCD    0
+        0x000001a8:    00000000    ....    DCD    0
+        0x000001ac:    00000000    ....    DCD    0
+        0x000001b0:    00000000    ....    DCD    0
+        0x000001b4:    00000000    ....    DCD    0
+        0x000001b8:    00000000    ....    DCD    0
+        0x000001bc:    00000000    ....    DCD    0
+        0x000001c0:    00000000    ....    DCD    0
+        0x000001c4:    00000000    ....    DCD    0
+        0x000001c8:    00000000    ....    DCD    0
+        0x000001cc:    00000000    ....    DCD    0
+        0x000001d0:    00000000    ....    DCD    0
+        0x000001d4:    00000000    ....    DCD    0
+        0x000001d8:    00000000    ....    DCD    0
+        0x000001dc:    00000000    ....    DCD    0
+        0x000001e0:    00000000    ....    DCD    0
+        0x000001e4:    00000000    ....    DCD    0
+        0x000001e8:    00000000    ....    DCD    0
+        0x000001ec:    00000000    ....    DCD    0
+        0x000001f0:    00000000    ....    DCD    0
+        0x000001f4:    00000000    ....    DCD    0
+        0x000001f8:    00000000    ....    DCD    0
+        0x000001fc:    00000000    ....    DCD    0
+        0x00000200:    00000000    ....    DCD    0
+        0x00000204:    00000000    ....    DCD    0
+        0x00000208:    00000000    ....    DCD    0
+        0x0000020c:    00000000    ....    DCD    0
+        0x00000210:    00000000    ....    DCD    0
+        0x00000214:    00000000    ....    DCD    0
+        0x00000218:    00000000    ....    DCD    0
+        0x0000021c:    00000000    ....    DCD    0
+        0x00000220:    00000000    ....    DCD    0
+        0x00000224:    00000000    ....    DCD    0
+        0x00000228:    00000000    ....    DCD    0
+        0x0000022c:    00000000    ....    DCD    0
+        0x00000230:    00000000    ....    DCD    0
+        0x00000234:    00000000    ....    DCD    0
+        0x00000238:    00000000    ....    DCD    0
+        0x0000023c:    00000000    ....    DCD    0
+        0x00000240:    00000000    ....    DCD    0
+        0x00000244:    00000000    ....    DCD    0
+        0x00000248:    00000000    ....    DCD    0
+        0x0000024c:    00000000    ....    DCD    0
+        0x00000250:    00000000    ....    DCD    0
+        0x00000254:    00000000    ....    DCD    0
+        0x00000258:    00000000    ....    DCD    0
+        0x0000025c:    00000000    ....    DCD    0
+        0x00000260:    00000000    ....    DCD    0
+        0x00000264:    00000000    ....    DCD    0
+        0x00000268:    00000000    ....    DCD    0
+        0x0000026c:    00000000    ....    DCD    0
+        0x00000270:    00000000    ....    DCD    0
+        0x00000274:    00000000    ....    DCD    0
+        0x00000278:    00000000    ....    DCD    0
+        0x0000027c:    00000000    ....    DCD    0
+        0x00000280:    00000000    ....    DCD    0
+        0x00000284:    00000000    ....    DCD    0
+        0x00000288:    00000000    ....    DCD    0
+        0x0000028c:    00000000    ....    DCD    0
+        0x00000290:    00000000    ....    DCD    0
+        0x00000294:    00000000    ....    DCD    0
+        0x00000298:    00000000    ....    DCD    0
+        0x0000029c:    00000000    ....    DCD    0
+        0x000002a0:    00000000    ....    DCD    0
+        0x000002a4:    00000000    ....    DCD    0
+        0x000002a8:    00000000    ....    DCD    0
+        0x000002ac:    00000000    ....    DCD    0
+        0x000002b0:    00000000    ....    DCD    0
+        0x000002b4:    00000000    ....    DCD    0
+        0x000002b8:    00000000    ....    DCD    0
+        0x000002bc:    00000000    ....    DCD    0
+        0x000002c0:    00000000    ....    DCD    0
+        0x000002c4:    00000000    ....    DCD    0
+        0x000002c8:    00000000    ....    DCD    0
+        0x000002cc:    00000000    ....    DCD    0
+        0x000002d0:    00000000    ....    DCD    0
+        0x000002d4:    00000000    ....    DCD    0
+        0x000002d8:    00000000    ....    DCD    0
+        0x000002dc:    00000000    ....    DCD    0
+        0x000002e0:    00000000    ....    DCD    0
+        0x000002e4:    00000000    ....    DCD    0
+        0x000002e8:    00000000    ....    DCD    0
+        0x000002ec:    00000000    ....    DCD    0
+        0x000002f0:    00000000    ....    DCD    0
+        0x000002f4:    00000000    ....    DCD    0
+        0x000002f8:    00000000    ....    DCD    0
+        0x000002fc:    00000000    ....    DCD    0
+        0x00000300:    00000000    ....    DCD    0
+        0x00000304:    00000000    ....    DCD    0
+        0x00000308:    00000000    ....    DCD    0
+        0x0000030c:    00000000    ....    DCD    0
+        0x00000310:    00000000    ....    DCD    0
+        0x00000314:    00000000    ....    DCD    0
+        0x00000318:    00000000    ....    DCD    0
+        0x0000031c:    00000000    ....    DCD    0
+        0x00000320:    00000000    ....    DCD    0
+        0x00000324:    00000000    ....    DCD    0
+        0x00000328:    00000000    ....    DCD    0
+        0x0000032c:    00000000    ....    DCD    0
+        0x00000330:    00000000    ....    DCD    0
+        0x00000334:    00000000    ....    DCD    0
+        0x00000338:    00000000    ....    DCD    0
+        0x0000033c:    00000000    ....    DCD    0
+        0x00000340:    00000000    ....    DCD    0
+        0x00000344:    00000000    ....    DCD    0
+        0x00000348:    00000000    ....    DCD    0
+        0x0000034c:    00000000    ....    DCD    0
+        0x00000350:    00000000    ....    DCD    0
+        0x00000354:    00000000    ....    DCD    0
+        0x00000358:    00000000    ....    DCD    0
+        0x0000035c:    00000000    ....    DCD    0
+        0x00000360:    00000000    ....    DCD    0
+        0x00000364:    00000000    ....    DCD    0
+        0x00000368:    00000000    ....    DCD    0
+        0x0000036c:    00000000    ....    DCD    0
+        0x00000370:    00000000    ....    DCD    0
+        0x00000374:    00000000    ....    DCD    0
+        0x00000378:    00000000    ....    DCD    0
+        0x0000037c:    00000000    ....    DCD    0
+        0x00000380:    00000000    ....    DCD    0
+        0x00000384:    00000000    ....    DCD    0
+        0x00000388:    00000000    ....    DCD    0
+        0x0000038c:    00000000    ....    DCD    0
+        0x00000390:    00000000    ....    DCD    0
+        0x00000394:    00000000    ....    DCD    0
+        0x00000398:    00000000    ....    DCD    0
+        0x0000039c:    00000000    ....    DCD    0
+        0x000003a0:    00000000    ....    DCD    0
+        0x000003a4:    00000000    ....    DCD    0
+        0x000003a8:    00000000    ....    DCD    0
+        0x000003ac:    00000000    ....    DCD    0
+        0x000003b0:    00000000    ....    DCD    0
+        0x000003b4:    00000000    ....    DCD    0
+        0x000003b8:    00000000    ....    DCD    0
+        0x000003bc:    00000000    ....    DCD    0
+    $t
+    .ARM.Collect$$$$00000000
+    .ARM.Collect$$$$00000001
+    __Vectors_End
+    __main
+    _main_stk
+        0x000003c0:    f8dfd00c    ....    LDR      sp,__lit__00000000 ; [0x3d0] = 0x20000408
+    .ARM.Collect$$$$00000004
+    _main_scatterload
+        0x000003c4:    f000fa46    ..F.    BL       __scatterload ; 0x854
+    .ARM.Collect$$$$00000008
+    .ARM.Collect$$$$0000000A
+    .ARM.Collect$$$$0000000B
+    __main_after_scatterload
+    _main_clock
+    _main_cpp_init
+    _main_init
+        0x000003c8:    4800        .H      LDR      r0,[pc,#0] ; [0x3cc] = 0x711
+        0x000003ca:    4700        .G      BX       r0
+    $d
+        0x000003cc:    00000711    ....    DCD    1809
+    .ARM.Collect$$$$00002712
+    __lit__00000000
+    .ARM.Collect$$$$0000000D
+    .ARM.Collect$$$$0000000F
+    __rt_final_cpp
+    __rt_final_exit
+        0x000003d0:    20000408    ...     DCD    536871944
+    $t
+    .text
+    $v0
+    Reset_Handler
+        0x000003d4:    480b        .H      LDR      r0,[pc,#44] ; [0x404] = 0x415
+        0x000003d6:    4780        .G      BLX      r0
+        0x000003d8:    480b        .H      LDR      r0,[pc,#44] ; [0x408] = 0x3c1
+        0x000003da:    4700        .G      BX       r0
+        0x000003dc:    e7fe        ..      B        0x3dc ; Reset_Handler + 8
+        0x000003de:    e7fe        ..      B        0x3de ; Reset_Handler + 10
+        0x000003e0:    e7fe        ..      B        0x3e0 ; Reset_Handler + 12
+        0x000003e2:    e7fe        ..      B        0x3e2 ; Reset_Handler + 14
+        0x000003e4:    e7fe        ..      B        0x3e4 ; Reset_Handler + 16
+        0x000003e6:    e7fe        ..      B        0x3e6 ; Reset_Handler + 18
+        0x000003e8:    e7fe        ..      B        0x3e8 ; Reset_Handler + 20
+        0x000003ea:    e7fe        ..      B        0x3ea ; Reset_Handler + 22
+    SysTick_Handler
+        0x000003ec:    e7fe        ..      B        SysTick_Handler ; 0x3ec
+    Interrupt0_Handler
+        0x000003ee:    e7fe        ..      B        Interrupt0_Handler ; 0x3ee
+    Interrupt1_Handler
+        0x000003f0:    e7fe        ..      B        Interrupt1_Handler ; 0x3f0
+    Interrupt2_Handler
+        0x000003f2:    e7fe        ..      B        Interrupt2_Handler ; 0x3f2
+    Interrupt3_Handler
+        0x000003f4:    e7fe        ..      B        Interrupt3_Handler ; 0x3f4
+    Interrupt4_Handler
+        0x000003f6:    e7fe        ..      B        Interrupt4_Handler ; 0x3f6
+    Interrupt5_Handler
+        0x000003f8:    e7fe        ..      B        Interrupt5_Handler ; 0x3f8
+    Interrupt6_Handler
+        0x000003fa:    e7fe        ..      B        Interrupt6_Handler ; 0x3fa
+    Interrupt7_Handler
+        0x000003fc:    e7fe        ..      B        Interrupt7_Handler ; 0x3fc
+    Interrupt8_Handler
+        0x000003fe:    e7fe        ..      B        Interrupt8_Handler ; 0x3fe
+    Interrupt9_Handler
+        0x00000400:    e7fe        ..      B        Interrupt9_Handler ; 0x400
+    $d
+        0x00000402:    0000        ..      DCW    0
+        0x00000404:    00000415    ....    DCD    1045
+        0x00000408:    000003c1    ....    DCD    961
+    $t
+    .text
+    SystemCoreClockUpdate
+        0x0000040c:    4909        .I      LDR      r1,[pc,#36] ; [0x434] = 0x20000000
+        0x0000040e:    4808        .H      LDR      r0,[pc,#32] ; [0x430] = 0x17d7840
+        0x00000410:    6008        .`      STR      r0,[r1,#0]
+        0x00000412:    4770        pG      BX       lr
+    SystemInit
+        0x00000414:    4909        .I      LDR      r1,[pc,#36] ; [0x43c] = 0xe000ed08
+        0x00000416:    4808        .H      LDR      r0,[pc,#32] ; [0x438] = 0
+        0x00000418:    6008        .`      STR      r0,[r1,#0]
+        0x0000041a:    4808        .H      LDR      r0,[pc,#32] ; [0x43c] = 0xe000ed08
+        0x0000041c:    3080        .0      ADDS     r0,r0,#0x80
+        0x0000041e:    6801        .h      LDR      r1,[r0,#0]
+        0x00000420:    f4410170    A.p.    ORR      r1,r1,#0xf00000
+        0x00000424:    6001        .`      STR      r1,[r0,#0]
+        0x00000426:    4903        .I      LDR      r1,[pc,#12] ; [0x434] = 0x20000000
+        0x00000428:    4801        .H      LDR      r0,[pc,#4] ; [0x430] = 0x17d7840
+        0x0000042a:    6008        .`      STR      r0,[r1,#0]
+        0x0000042c:    4770        pG      BX       lr
+    $d
+        0x0000042e:    0000        ..      DCW    0
+        0x00000430:    017d7840    @x}.    DCD    25000000
+        0x00000434:    20000000    ...     DCD    536870912
+        0x00000438:    00000000    ....    DCD    0
+        0x0000043c:    e000ed08    ....    DCD    3758157064
+    $t
+    .text
+    GPIO_Init
+        0x00000440:    b570        p.      PUSH     {r4-r6,lr}
+        0x00000442:    2300        .#      MOVS     r3,#0
+        0x00000444:    790d        .y      LDRB     r5,[r1,#4]
+        0x00000446:    794c        Ly      LDRB     r4,[r1,#5]
+        0x00000448:    680a        .h      LDR      r2,[r1,#0]
+        0x0000044a:    4619        .F      MOV      r1,r3
+        0x0000044c:    6003        .`      STR      r3,[r0,#0]
+        0x0000044e:    6043        C`      STR      r3,[r0,#4]
+        0x00000450:    6103        .a      STR      r3,[r0,#0x10]
+        0x00000452:    6143        Ca      STR      r3,[r0,#0x14]
+        0x00000454:    6183        .a      STR      r3,[r0,#0x18]
+        0x00000456:    61c3        .a      STR      r3,[r0,#0x1c]
+        0x00000458:    6203        .b      STR      r3,[r0,#0x20]
+        0x0000045a:    6243        Cb      STR      r3,[r0,#0x24]
+        0x0000045c:    6283        .b      STR      r3,[r0,#0x28]
+        0x0000045e:    62c3        .b      STR      r3,[r0,#0x2c]
+        0x00000460:    6303        .c      STR      r3,[r0,#0x30]
+        0x00000462:    6343        Cc      STR      r3,[r0,#0x34]
+        0x00000464:    f8c03038    ..80    STR.W    r3,[r0,#0x38]
+        0x00000468:    eb000683    ....    ADD      r6,r0,r3,LSL #2
+        0x0000046c:    f8c61400    ....    STR      r1,[r6,#0x400]
+        0x00000470:    f8c61800    ....    STR      r1,[r6,#0x800]
+        0x00000474:    1c5b        [.      ADDS     r3,r3,#1
+        0x00000476:    2bff        .+      CMP      r3,#0xff
+        0x00000478:    d9f6        ..      BLS      0x468 ; GPIO_Init + 40
+        0x0000047a:    b125        %.      CBZ      r5,0x486 ; GPIO_Init + 70
+        0x0000047c:    2d01        .-      CMP      r5,#1
+        0x0000047e:    d005        ..      BEQ      0x48c ; GPIO_Init + 76
+        0x00000480:    2d02        .-      CMP      r5,#2
+        0x00000482:    d007        ..      BEQ      0x494 ; GPIO_Init + 84
+        0x00000484:    e009        ..      B        0x49a ; GPIO_Init + 90
+        0x00000486:    6901        .i      LDR      r1,[r0,#0x10]
+        0x00000488:    4391        .C      BICS     r1,r1,r2
+        0x0000048a:    e001        ..      B        0x490 ; GPIO_Init + 80
+        0x0000048c:    6901        .i      LDR      r1,[r0,#0x10]
+        0x0000048e:    4311        .C      ORRS     r1,r1,r2
+        0x00000490:    6101        .a      STR      r1,[r0,#0x10]
+        0x00000492:    e002        ..      B        0x49a ; GPIO_Init + 90
+        0x00000494:    6981        .i      LDR      r1,[r0,#0x18]
+        0x00000496:    4311        .C      ORRS     r1,r1,r2
+        0x00000498:    6181        .a      STR      r1,[r0,#0x18]
+        0x0000049a:    2c01        .,      CMP      r4,#1
+        0x0000049c:    d00f        ..      BEQ      0x4be ; GPIO_Init + 126
+        0x0000049e:    2c02        .,      CMP      r4,#2
+        0x000004a0:    d014        ..      BEQ      0x4cc ; GPIO_Init + 140
+        0x000004a2:    2c03        .,      CMP      r4,#3
+        0x000004a4:    d01c        ..      BEQ      0x4e0 ; GPIO_Init + 160
+        0x000004a6:    2c04        .,      CMP      r4,#4
+        0x000004a8:    d108        ..      BNE      0x4bc ; GPIO_Init + 124
+        0x000004aa:    6a01        .j      LDR      r1,[r0,#0x20]
+        0x000004ac:    4311        .C      ORRS     r1,r1,r2
+        0x000004ae:    6201        .b      STR      r1,[r0,#0x20]
+        0x000004b0:    6b01        .k      LDR      r1,[r0,#0x30]
+        0x000004b2:    4311        .C      ORRS     r1,r1,r2
+        0x000004b4:    6301        .c      STR      r1,[r0,#0x30]
+        0x000004b6:    6a81        .j      LDR      r1,[r0,#0x28]
+        0x000004b8:    4311        .C      ORRS     r1,r1,r2
+        0x000004ba:    6281        .b      STR      r1,[r0,#0x28]
+        0x000004bc:    bd70        p.      POP      {r4-r6,pc}
+        0x000004be:    6a01        .j      LDR      r1,[r0,#0x20]
+        0x000004c0:    4311        .C      ORRS     r1,r1,r2
+        0x000004c2:    6201        .b      STR      r1,[r0,#0x20]
+        0x000004c4:    6ac1        .j      LDR      r1,[r0,#0x2c]
+        0x000004c6:    4311        .C      ORRS     r1,r1,r2
+        0x000004c8:    62c1        .b      STR      r1,[r0,#0x2c]
+        0x000004ca:    e00f        ..      B        0x4ec ; GPIO_Init + 172
+        0x000004cc:    6a01        .j      LDR      r1,[r0,#0x20]
+        0x000004ce:    4311        .C      ORRS     r1,r1,r2
+        0x000004d0:    6201        .b      STR      r1,[r0,#0x20]
+        0x000004d2:    6ac1        .j      LDR      r1,[r0,#0x2c]
+        0x000004d4:    4311        .C      ORRS     r1,r1,r2
+        0x000004d6:    62c1        .b      STR      r1,[r0,#0x2c]
+        0x000004d8:    6b01        .k      LDR      r1,[r0,#0x30]
+        0x000004da:    4311        .C      ORRS     r1,r1,r2
+        0x000004dc:    6301        .c      STR      r1,[r0,#0x30]
+        0x000004de:    bd70        p.      POP      {r4-r6,pc}
+        0x000004e0:    6a01        .j      LDR      r1,[r0,#0x20]
+        0x000004e2:    4311        .C      ORRS     r1,r1,r2
+        0x000004e4:    6201        .b      STR      r1,[r0,#0x20]
+        0x000004e6:    6a81        .j      LDR      r1,[r0,#0x28]
+        0x000004e8:    4311        .C      ORRS     r1,r1,r2
+        0x000004ea:    6281        .b      STR      r1,[r0,#0x28]
+        0x000004ec:    6b41        Ak      LDR      r1,[r0,#0x34]
+        0x000004ee:    4311        .C      ORRS     r1,r1,r2
+        0x000004f0:    6341        Ac      STR      r1,[r0,#0x34]
+        0x000004f2:    bd70        p.      POP      {r4-r6,pc}
+    GPIO_SetOutEnable
+        0x000004f4:    6902        .i      LDR      r2,[r0,#0x10]
+        0x000004f6:    430a        .C      ORRS     r2,r2,r1
+        0x000004f8:    6102        .a      STR      r2,[r0,#0x10]
+        0x000004fa:    4770        pG      BX       lr
+    GPIO_ClrOutEnable
+        0x000004fc:    6141        Aa      STR      r1,[r0,#0x14]
+        0x000004fe:    4770        pG      BX       lr
+    GPIO_SetBit
+        0x00000500:    6842        Bh      LDR      r2,[r0,#4]
+        0x00000502:    430a        .C      ORRS     r2,r2,r1
+        0x00000504:    6042        B`      STR      r2,[r0,#4]
+        0x00000506:    4770        pG      BX       lr
+    GPIO_ResetBit
+        0x00000508:    6842        Bh      LDR      r2,[r0,#4]
+        0x0000050a:    438a        .C      BICS     r2,r2,r1
+        0x0000050c:    6042        B`      STR      r2,[r0,#4]
+        0x0000050e:    4770        pG      BX       lr
+    GPIO_WriteBits
+        0x00000510:    6041        A`      STR      r1,[r0,#4]
+        0x00000512:    4770        pG      BX       lr
+    GPIO_ReadBits
+        0x00000514:    6800        .h      LDR      r0,[r0,#0]
+        0x00000516:    4770        pG      BX       lr
+    GPIO_GetOutEnable
+        0x00000518:    6900        .i      LDR      r0,[r0,#0x10]
+        0x0000051a:    4770        pG      BX       lr
+    GPIO_SetAltFunc
+        0x0000051c:    6982        .i      LDR      r2,[r0,#0x18]
+        0x0000051e:    430a        .C      ORRS     r2,r2,r1
+        0x00000520:    6182        .a      STR      r2,[r0,#0x18]
+        0x00000522:    4770        pG      BX       lr
+    GPIO_ClrAltFunc
+        0x00000524:    61c1        .a      STR      r1,[r0,#0x1c]
+        0x00000526:    4770        pG      BX       lr
+    GPIO_GetAltFunc
+        0x00000528:    6980        .i      LDR      r0,[r0,#0x18]
+        0x0000052a:    4770        pG      BX       lr
+    GPIO_IntClear
+        0x0000052c:    6b82        .k      LDR      r2,[r0,#0x38]
+        0x0000052e:    430a        .C      ORRS     r2,r2,r1
+        0x00000530:    6382        .c      STR      r2,[r0,#0x38]
+        0x00000532:    4770        pG      BX       lr
+    GPIO_GetIntStatus
+        0x00000534:    6b80        .k      LDR      r0,[r0,#0x38]
+        0x00000536:    4770        pG      BX       lr
+    GPIO_SetIntEnable
+        0x00000538:    6a02        .j      LDR      r2,[r0,#0x20]
+        0x0000053a:    430a        .C      ORRS     r2,r2,r1
+        0x0000053c:    6202        .b      STR      r2,[r0,#0x20]
+        0x0000053e:    6a00        .j      LDR      r0,[r0,#0x20]
+        0x00000540:    4770        pG      BX       lr
+    GPIO_ClrIntEnable
+        0x00000542:    6a42        Bj      LDR      r2,[r0,#0x24]
+        0x00000544:    430a        .C      ORRS     r2,r2,r1
+        0x00000546:    6242        Bb      STR      r2,[r0,#0x24]
+        0x00000548:    6a40        @j      LDR      r0,[r0,#0x24]
+        0x0000054a:    4770        pG      BX       lr
+    GPIO_SetIntHighLevel
+        0x0000054c:    6a02        .j      LDR      r2,[r0,#0x20]
+        0x0000054e:    430a        .C      ORRS     r2,r2,r1
+        0x00000550:    6202        .b      STR      r2,[r0,#0x20]
+        0x00000552:    6ac2        .j      LDR      r2,[r0,#0x2c]
+        0x00000554:    430a        .C      ORRS     r2,r2,r1
+        0x00000556:    62c2        .b      STR      r2,[r0,#0x2c]
+        0x00000558:    6b02        .k      LDR      r2,[r0,#0x30]
+        0x0000055a:    430a        .C      ORRS     r2,r2,r1
+        0x0000055c:    6302        .c      STR      r2,[r0,#0x30]
+        0x0000055e:    4770        pG      BX       lr
+    GPIO_SetIntRisingEdge
+        0x00000560:    6a02        .j      LDR      r2,[r0,#0x20]
+        0x00000562:    430a        .C      ORRS     r2,r2,r1
+        0x00000564:    6202        .b      STR      r2,[r0,#0x20]
+        0x00000566:    6a82        .j      LDR      r2,[r0,#0x28]
+        0x00000568:    430a        .C      ORRS     r2,r2,r1
+        0x0000056a:    6282        .b      STR      r2,[r0,#0x28]
+        0x0000056c:    6b02        .k      LDR      r2,[r0,#0x30]
+        0x0000056e:    430a        .C      ORRS     r2,r2,r1
+        0x00000570:    6302        .c      STR      r2,[r0,#0x30]
+        0x00000572:    4770        pG      BX       lr
+    GPIO_SetIntLowLevel
+        0x00000574:    6a02        .j      LDR      r2,[r0,#0x20]
+        0x00000576:    430a        .C      ORRS     r2,r2,r1
+        0x00000578:    6202        .b      STR      r2,[r0,#0x20]
+        0x0000057a:    6ac2        .j      LDR      r2,[r0,#0x2c]
+        0x0000057c:    430a        .C      ORRS     r2,r2,r1
+        0x0000057e:    62c2        .b      STR      r2,[r0,#0x2c]
+        0x00000580:    6b42        Bk      LDR      r2,[r0,#0x34]
+        0x00000582:    430a        .C      ORRS     r2,r2,r1
+        0x00000584:    6342        Bc      STR      r2,[r0,#0x34]
+        0x00000586:    4770        pG      BX       lr
+    GPIO_SetIntFallingEdge
+        0x00000588:    6a02        .j      LDR      r2,[r0,#0x20]
+        0x0000058a:    430a        .C      ORRS     r2,r2,r1
+        0x0000058c:    6202        .b      STR      r2,[r0,#0x20]
+        0x0000058e:    6a82        .j      LDR      r2,[r0,#0x28]
+        0x00000590:    430a        .C      ORRS     r2,r2,r1
+        0x00000592:    6282        .b      STR      r2,[r0,#0x28]
+        0x00000594:    6b42        Bk      LDR      r2,[r0,#0x34]
+        0x00000596:    430a        .C      ORRS     r2,r2,r1
+        0x00000598:    6342        Bc      STR      r2,[r0,#0x34]
+        0x0000059a:    4770        pG      BX       lr
+    GPIO_MaskedWrite
+        0x0000059c:    b2d3        ..      UXTB     r3,r2
+        0x0000059e:    eb000383    ....    ADD      r3,r0,r3,LSL #2
+        0x000005a2:    f8c31400    ....    STR      r1,[r3,#0x400]
+        0x000005a6:    f44f737f    O..s    MOV      r3,#0x3fc
+        0x000005aa:    ea031292    ....    AND      r2,r3,r2,LSR #6
+        0x000005ae:    4410        .D      ADD      r0,r0,r2
+        0x000005b0:    f8c01800    ....    STR      r1,[r0,#0x800]
+        0x000005b4:    4770        pG      BX       lr
+    .text
+    UART_Init
+        0x000005b6:    b510        ..      PUSH     {r4,lr}
+        0x000005b8:    2200        ."      MOVS     r2,#0
+        0x000005ba:    4613        .F      MOV      r3,r2
+        0x000005bc:    6002        .`      STR      r2,[r0,#0]
+        0x000005be:    6042        B`      STR      r2,[r0,#4]
+        0x000005c0:    6082        .`      STR      r2,[r0,#8]
+        0x000005c2:    60c2        .`      STR      r2,[r0,#0xc]
+        0x000005c4:    6102        .a      STR      r2,[r0,#0x10]
+        0x000005c6:    790c        .y      LDRB     r4,[r1,#4]
+        0x000005c8:    2c01        .,      CMP      r4,#1
+        0x000005ca:    d100        ..      BNE      0x5ce ; UART_Init + 24
+        0x000005cc:    2201        ."      MOVS     r2,#1
+        0x000005ce:    794c        Ly      LDRB     r4,[r1,#5]
+        0x000005d0:    2c01        .,      CMP      r4,#1
+        0x000005d2:    d101        ..      BNE      0x5d8 ; UART_Init + 34
+        0x000005d4:    f0420202    B...    ORR      r2,r2,#2
+        0x000005d8:    798c        .y      LDRB     r4,[r1,#6]
+        0x000005da:    2c01        .,      CMP      r4,#1
+        0x000005dc:    d101        ..      BNE      0x5e2 ; UART_Init + 44
+        0x000005de:    f0420204    B...    ORR      r2,r2,#4
+        0x000005e2:    79cc        .y      LDRB     r4,[r1,#7]
+        0x000005e4:    2c01        .,      CMP      r4,#1
+        0x000005e6:    d101        ..      BNE      0x5ec ; UART_Init + 54
+        0x000005e8:    f0420208    B...    ORR      r2,r2,#8
+        0x000005ec:    7a0c        .z      LDRB     r4,[r1,#8]
+        0x000005ee:    2c01        .,      CMP      r4,#1
+        0x000005f0:    d101        ..      BNE      0x5f6 ; UART_Init + 64
+        0x000005f2:    f0420210    B...    ORR      r2,r2,#0x10
+        0x000005f6:    7a4c        Lz      LDRB     r4,[r1,#9]
+        0x000005f8:    2c01        .,      CMP      r4,#1
+        0x000005fa:    d101        ..      BNE      0x600 ; UART_Init + 74
+        0x000005fc:    f0420220    B. .    ORR      r2,r2,#0x20
+        0x00000600:    7a89        .z      LDRB     r1,[r1,#0xa]
+        0x00000602:    2901        .)      CMP      r1,#1
+        0x00000604:    d101        ..      BNE      0x60a ; UART_Init + 84
+        0x00000606:    f0420240    B.@.    ORR      r2,r2,#0x40
+        0x0000060a:    6083        .`      STR      r3,[r0,#8]
+        0x0000060c:    6082        .`      STR      r2,[r0,#8]
+        0x0000060e:    2110        .!      MOVS     r1,#0x10
+        0x00000610:    6101        .a      STR      r1,[r0,#0x10]
+        0x00000612:    6840        @h      LDR      r0,[r0,#4]
+        0x00000614:    f0100f0c    ....    TST      r0,#0xc
+        0x00000618:    d001        ..      BEQ      0x61e ; UART_Init + 104
+        0x0000061a:    2000        .       MOVS     r0,#0
+        0x0000061c:    bd10        ..      POP      {r4,pc}
+        0x0000061e:    2001        .       MOVS     r0,#1
+        0x00000620:    bd10        ..      POP      {r4,pc}
+    UART_GetRxBufferFull
+        0x00000622:    6840        @h      LDR      r0,[r0,#4]
+        0x00000624:    f3c00040    ..@.    UBFX     r0,r0,#1,#1
+        0x00000628:    4770        pG      BX       lr
+    UART_GetTxBufferFull
+        0x0000062a:    6840        @h      LDR      r0,[r0,#4]
+        0x0000062c:    f0000001    ....    AND      r0,r0,#1
+        0x00000630:    4770        pG      BX       lr
+    UART_GetRxBufferOverrunStatus
+        0x00000632:    6840        @h      LDR      r0,[r0,#4]
+        0x00000634:    f3c000c0    ....    UBFX     r0,r0,#3,#1
+        0x00000638:    4770        pG      BX       lr
+    UART_GetTxBufferOverrunStatus
+        0x0000063a:    6840        @h      LDR      r0,[r0,#4]
+        0x0000063c:    f3c00080    ....    UBFX     r0,r0,#2,#1
+        0x00000640:    4770        pG      BX       lr
+    UART_ClearRxBufferOverrunStatus
+        0x00000642:    2108        .!      MOVS     r1,#8
+        0x00000644:    6041        A`      STR      r1,[r0,#4]
+        0x00000646:    4770        pG      BX       lr
+    UART_ClearTxBufferOverrunStatus
+        0x00000648:    2104        .!      MOVS     r1,#4
+        0x0000064a:    6041        A`      STR      r1,[r0,#4]
+        0x0000064c:    4770        pG      BX       lr
+    UART_SendChar
+        0x0000064e:    6842        Bh      LDR      r2,[r0,#4]
+        0x00000650:    07d2        ..      LSLS     r2,r2,#31
+        0x00000652:    d1fc        ..      BNE      UART_SendChar ; 0x64e
+        0x00000654:    6001        .`      STR      r1,[r0,#0]
+        0x00000656:    4770        pG      BX       lr
+    UART_SendString
+        0x00000658:    b510        ..      PUSH     {r4,lr}
+        0x0000065a:    2200        ."      MOVS     r2,#0
+        0x0000065c:    5c8b        .\      LDRB     r3,[r1,r2]
+        0x0000065e:    6844        Dh      LDR      r4,[r0,#4]
+        0x00000660:    07e4        ..      LSLS     r4,r4,#31
+        0x00000662:    d1fc        ..      BNE      0x65e ; UART_SendString + 6
+        0x00000664:    6003        .`      STR      r3,[r0,#0]
+        0x00000666:    1c52        R.      ADDS     r2,r2,#1
+        0x00000668:    5c8b        .\      LDRB     r3,[r1,r2]
+        0x0000066a:    2b00        .+      CMP      r3,#0
+        0x0000066c:    d1f6        ..      BNE      0x65c ; UART_SendString + 4
+        0x0000066e:    bd10        ..      POP      {r4,pc}
+    UART_ReceiveChar
+        0x00000670:    6841        Ah      LDR      r1,[r0,#4]
+        0x00000672:    0789        ..      LSLS     r1,r1,#30
+        0x00000674:    d5fc        ..      BPL      UART_ReceiveChar ; 0x670
+        0x00000676:    6800        .h      LDR      r0,[r0,#0]
+        0x00000678:    b2c0        ..      UXTB     r0,r0
+        0x0000067a:    4770        pG      BX       lr
+    UART_GetBaudDivider
+        0x0000067c:    6900        .i      LDR      r0,[r0,#0x10]
+        0x0000067e:    4770        pG      BX       lr
+    UART_GetTxIRQStatus
+        0x00000680:    68c0        .h      LDR      r0,[r0,#0xc]
+        0x00000682:    f0000001    ....    AND      r0,r0,#1
+        0x00000686:    4770        pG      BX       lr
+    UART_GetRxIRQStatus
+        0x00000688:    68c0        .h      LDR      r0,[r0,#0xc]
+        0x0000068a:    f3c00040    ..@.    UBFX     r0,r0,#1,#1
+        0x0000068e:    4770        pG      BX       lr
+    UART_ClearTxIRQ
+        0x00000690:    2101        .!      MOVS     r1,#1
+        0x00000692:    60c1        .`      STR      r1,[r0,#0xc]
+        0x00000694:    4770        pG      BX       lr
+    UART_ClearRxIRQ
+        0x00000696:    2102        .!      MOVS     r1,#2
+        0x00000698:    60c1        .`      STR      r1,[r0,#0xc]
+        0x0000069a:    4770        pG      BX       lr
+    UART_GetTxOverrunIRQStatus
+        0x0000069c:    68c0        .h      LDR      r0,[r0,#0xc]
+        0x0000069e:    f3c00080    ....    UBFX     r0,r0,#2,#1
+        0x000006a2:    4770        pG      BX       lr
+    UART_GetRxOverrunIRQStatus
+        0x000006a4:    68c0        .h      LDR      r0,[r0,#0xc]
+        0x000006a6:    f3c000c0    ....    UBFX     r0,r0,#3,#1
+        0x000006aa:    4770        pG      BX       lr
+    UART_ClearTxOverrunIRQ
+        0x000006ac:    2104        .!      MOVS     r1,#4
+        0x000006ae:    60c1        .`      STR      r1,[r0,#0xc]
+        0x000006b0:    4770        pG      BX       lr
+    UART_ClearRxOverrunIRQ
+        0x000006b2:    2108        .!      MOVS     r1,#8
+        0x000006b4:    60c1        .`      STR      r1,[r0,#0xc]
+        0x000006b6:    4770        pG      BX       lr
+    UART_SetHSTM
+        0x000006b8:    6881        .h      LDR      r1,[r0,#8]
+        0x000006ba:    f0410140    A.@.    ORR      r1,r1,#0x40
+        0x000006be:    6081        .`      STR      r1,[r0,#8]
+        0x000006c0:    4770        pG      BX       lr
+    UART_ClrHSTM
+        0x000006c2:    6881        .h      LDR      r1,[r0,#8]
+        0x000006c4:    f0210140    !.@.    BIC      r1,r1,#0x40
+        0x000006c8:    6081        .`      STR      r1,[r0,#8]
+        0x000006ca:    4770        pG      BX       lr
+    .text
+    led_app
+        0x000006cc:    b51c        ..      PUSH     {r2-r4,lr}
+        0x000006ce:    200f        .       MOVS     r0,#0xf
+        0x000006d0:    9000        ..      STR      r0,[sp,#0]
+        0x000006d2:    2001        .       MOVS     r0,#1
+        0x000006d4:    f88d0004    ....    STRB     r0,[sp,#4]
+        0x000006d8:    2000        .       MOVS     r0,#0
+        0x000006da:    4c0c        .L      LDR      r4,[pc,#48] ; [0x70c] = 0x40010000
+        0x000006dc:    f88d0005    ....    STRB     r0,[sp,#5]
+        0x000006e0:    4669        iF      MOV      r1,sp
+        0x000006e2:    4620         F      MOV      r0,r4
+        0x000006e4:    f7fffeac    ....    BL       GPIO_Init ; 0x440
+        0x000006e8:    210f        .!      MOVS     r1,#0xf
+        0x000006ea:    4620         F      MOV      r0,r4
+        0x000006ec:    f7ffff10    ....    BL       GPIO_WriteBits ; 0x510
+        0x000006f0:    210e        .!      MOVS     r1,#0xe
+        0x000006f2:    4620         F      MOV      r0,r4
+        0x000006f4:    f7ffff0c    ....    BL       GPIO_WriteBits ; 0x510
+        0x000006f8:    210d        .!      MOVS     r1,#0xd
+        0x000006fa:    4620         F      MOV      r0,r4
+        0x000006fc:    f7ffff08    ....    BL       GPIO_WriteBits ; 0x510
+        0x00000700:    210b        .!      MOVS     r1,#0xb
+        0x00000702:    4620         F      MOV      r0,r4
+        0x00000704:    f7ffff04    ....    BL       GPIO_WriteBits ; 0x510
+        0x00000708:    2107        .!      MOVS     r1,#7
+        0x0000070a:    e7ee        ..      B        0x6ea ; led_app + 30
+    $d
+        0x0000070c:    40010000    ...@    DCD    1073807360
+    $t
+    .text
+    main
+        0x00000710:    b510        ..      PUSH     {r4,lr}
+        0x00000712:    f7fffe7f    ....    BL       SystemInit ; 0x414
+        0x00000716:    f44f30e1    O..0    MOV      r0,#0x1c200
+        0x0000071a:    f000f81b    ....    BL       UartInit ; 0x754
+        0x0000071e:    4809        .H      LDR      r0,[pc,#36] ; [0x744] = 0x920
+        0x00000720:    f000f8aa    ....    BL       __0printf$bare ; 0x878
+        0x00000724:    4808        .H      LDR      r0,[pc,#32] ; [0x748] = 0x8c8
+        0x00000726:    f000f8a7    ....    BL       __0printf$bare ; 0x878
+        0x0000072a:    4806        .H      LDR      r0,[pc,#24] ; [0x744] = 0x920
+        0x0000072c:    f000f8a4    ....    BL       __0printf$bare ; 0x878
+        0x00000730:    4806        .H      LDR      r0,[pc,#24] ; [0x74c] = 0x980
+        0x00000732:    f000f8a1    ....    BL       __0printf$bare ; 0x878
+        0x00000736:    a006        ..      ADR      r0,{pc}+0x1a ; 0x750
+        0x00000738:    f000f89e    ....    BL       __0printf$bare ; 0x878
+        0x0000073c:    f000f822    ..".    BL       app_call_if ; 0x784
+        0x00000740:    2000        .       MOVS     r0,#0
+        0x00000742:    bd10        ..      POP      {r4,pc}
+    $d
+        0x00000744:    00000920     ...    DCD    2336
+        0x00000748:    000008c8    ....    DCD    2248
+        0x0000074c:    00000980    ....    DCD    2432
+        0x00000750:    00000a0d    ....    DCD    2573
+    $t
+    .text
+    UartInit
+        0x00000754:    b50e        ..      PUSH     {r1-r3,lr}
+        0x00000756:    2101        .!      MOVS     r1,#1
+        0x00000758:    2200        ."      MOVS     r2,#0
+        0x0000075a:    f88d1004    ....    STRB     r1,[sp,#4]
+        0x0000075e:    f88d1005    ....    STRB     r1,[sp,#5]
+        0x00000762:    f88d2008    ...     STRB     r2,[sp,#8]
+        0x00000766:    f88d2006    ...     STRB     r2,[sp,#6]
+        0x0000076a:    f88d2009    ...     STRB     r2,[sp,#9]
+        0x0000076e:    f88d1007    ....    STRB     r1,[sp,#7]
+        0x00000772:    f88d100a    ....    STRB     r1,[sp,#0xa]
+        0x00000776:    9000        ..      STR      r0,[sp,#0]
+        0x00000778:    4669        iF      MOV      r1,sp
+        0x0000077a:    f04f2040    O.@     MOV      r0,#0x40004000
+        0x0000077e:    f7ffff1a    ....    BL       UART_Init ; 0x5b6
+        0x00000782:    bd0e        ..      POP      {r1-r3,pc}
+    app_call_if
+        0x00000784:    b510        ..      PUSH     {r4,lr}
+        0x00000786:    a003        ..      ADR      r0,{pc}+0xe ; 0x794
+        0x00000788:    f000f876    ..v.    BL       __0printf$bare ; 0x878
+        0x0000078c:    e8bd4010    ...@    POP      {r4,lr}
+        0x00000790:    f7ffbf9c    ....    B.W      led_app ; 0x6cc
+    $d
+        0x00000794:    2a2a0a0d    ..**    DCD    707398157
+        0x00000798:    2a2a2a2a    ****    DCD    707406378
+        0x0000079c:    44454c20     LED    DCD    1145392160
+        0x000007a0:    70704120     App    DCD    1886404896
+        0x000007a4:    6163696c    lica    DCD    1633905004
+        0x000007a8:    6e6f6974    tion    DCD    1852795252
+        0x000007ac:    2a2a2a20     ***    DCD    707406368
+        0x000007b0:    0d2a2a2a    ***.    DCD    220867114
+        0x000007b4:    0000000a    ....    DCD    10
+    $t
+    .text
+    fputc
+        0x000007b8:    b570        p.      PUSH     {r4-r6,lr}
+        0x000007ba:    4605        .F      MOV      r5,r0
+        0x000007bc:    b2c1        ..      UXTB     r1,r0
+        0x000007be:    f04f2440    O.@$    MOV      r4,#0x40004000
+        0x000007c2:    4620         F      MOV      r0,r4
+        0x000007c4:    f7ffff43    ..C.    BL       UART_SendChar ; 0x64e
+        0x000007c8:    6860        `h      LDR      r0,[r4,#4]
+        0x000007ca:    07c0        ..      LSLS     r0,r0,#31
+        0x000007cc:    d1fc        ..      BNE      0x7c8 ; fputc + 16
+        0x000007ce:    4628        (F      MOV      r0,r5
+        0x000007d0:    bd70        p.      POP      {r4-r6,pc}
+    fgetc
+        0x000007d2:    f04f2040    O.@     MOV      r0,#0x40004000
+        0x000007d6:    6841        Ah      LDR      r1,[r0,#4]
+        0x000007d8:    0789        ..      LSLS     r1,r1,#30
+        0x000007da:    d5fc        ..      BPL      0x7d6 ; fgetc + 4
+        0x000007dc:    f7ffbf48    ..H.    B.W      UART_ReceiveChar ; 0x670
+    _ttywrch
+        0x000007e0:    b510        ..      PUSH     {r4,lr}
+        0x000007e2:    b2c1        ..      UXTB     r1,r0
+        0x000007e4:    f04f2440    O.@$    MOV      r4,#0x40004000
+        0x000007e8:    4620         F      MOV      r0,r4
+        0x000007ea:    f7ffff30    ..0.    BL       UART_SendChar ; 0x64e
+        0x000007ee:    6860        `h      LDR      r0,[r4,#4]
+        0x000007f0:    07c0        ..      LSLS     r0,r0,#31
+        0x000007f2:    d1fc        ..      BNE      0x7ee ; _ttywrch + 14
+        0x000007f4:    bd10        ..      POP      {r4,pc}
+    _ferror
+        0x000007f6:    f04f30ff    O..0    MOV      r0,#0xffffffff
+        0x000007fa:    4770        pG      BX       lr
+    _sys_exit
+        0x000007fc:    e7fe        ..      B        _sys_exit ; 0x7fc
+    .text
+    NMI_Handler
+        0x000007fe:    4770        pG      BX       lr
+    HardFault_Handler
+        0x00000800:    e7fe        ..      B        HardFault_Handler ; 0x800
+    MemManage_Handler
+        0x00000802:    e7fe        ..      B        MemManage_Handler ; 0x802
+    BusFault_Handler
+        0x00000804:    e7fe        ..      B        BusFault_Handler ; 0x804
+    UsageFault_Handler
+        0x00000806:    e7fe        ..      B        UsageFault_Handler ; 0x806
+    SVC_Handler
+        0x00000808:    4770        pG      BX       lr
+    DebugMon_Handler
+        0x0000080a:    4770        pG      BX       lr
+    PendSV_Handler
+        0x0000080c:    4770        pG      BX       lr
+    UART1_Handler
+        0x0000080e:    4770        pG      BX       lr
+    TIMER1_Handler
+        0x00000810:    4770        pG      BX       lr
+    GPIO0_Handler
+        0x00000812:    4770        pG      BX       lr
+    GPIO0_0_Handler
+        0x00000814:    4770        pG      BX       lr
+    GPIO0_1_Handler
+        0x00000816:    4770        pG      BX       lr
+    GPIO0_2_Handler
+        0x00000818:    4770        pG      BX       lr
+    GPIO0_3_Handler
+        0x0000081a:    4770        pG      BX       lr
+    GPIO0_4_Handler
+        0x0000081c:    4770        pG      BX       lr
+    GPIO0_5_Handler
+        0x0000081e:    4770        pG      BX       lr
+    GPIO0_6_Handler
+        0x00000820:    4770        pG      BX       lr
+    GPIO0_7_Handler
+        0x00000822:    4770        pG      BX       lr
+    GPIO0_8_Handler
+        0x00000824:    4770        pG      BX       lr
+    GPIO0_9_Handler
+        0x00000826:    4770        pG      BX       lr
+    GPIO0_10_Handler
+        0x00000828:    4770        pG      BX       lr
+    GPIO0_11_Handler
+        0x0000082a:    4770        pG      BX       lr
+    GPIO0_12_Handler
+        0x0000082c:    4770        pG      BX       lr
+    GPIO0_13_Handler
+        0x0000082e:    4770        pG      BX       lr
+    GPIO0_14_Handler
+        0x00000830:    4770        pG      BX       lr
+    GPIO0_15_Handler
+        0x00000832:    4770        pG      BX       lr
+    USER_INT0_Handler
+        0x00000834:    4770        pG      BX       lr
+    USER_INT1_Handler
+        0x00000836:    4770        pG      BX       lr
+    USER_INT2_Handler
+        0x00000838:    4770        pG      BX       lr
+    USER_INT3_Handler
+        0x0000083a:    4770        pG      BX       lr
+    USER_INT4_Handler
+        0x0000083c:    4770        pG      BX       lr
+    USER_INT5_Handler
+        0x0000083e:    4770        pG      BX       lr
+    USER_INT6_Handler
+        0x00000840:    4770        pG      BX       lr
+    USER_INT7_Handler
+        0x00000842:    4770        pG      BX       lr
+    USER_INT8_Handler
+        0x00000844:    4770        pG      BX       lr
+    USER_INT9_Handler
+        0x00000846:    4770        pG      BX       lr
+    USER_INT10_Handler
+        0x00000848:    4770        pG      BX       lr
+    USER_INT11_Handler
+        0x0000084a:    4770        pG      BX       lr
+    USER_INT12_Handler
+        0x0000084c:    4770        pG      BX       lr
+    USER_INT13_Handler
+        0x0000084e:    4770        pG      BX       lr
+    USER_INT14_Handler
+        0x00000850:    4770        pG      BX       lr
+    USER_INT15_Handler
+        0x00000852:    4770        pG      BX       lr
+    .text
+    __scatterload
+    __scatterload_rt2
+        0x00000854:    4c06        .L      LDR      r4,[pc,#24] ; [0x870] = 0x9c8
+        0x00000856:    4d07        .M      LDR      r5,[pc,#28] ; [0x874] = 0x9e8
+        0x00000858:    e006        ..      B        0x868 ; __scatterload + 20
+        0x0000085a:    68e0        .h      LDR      r0,[r4,#0xc]
+        0x0000085c:    f0400301    @...    ORR      r3,r0,#1
+        0x00000860:    e8940007    ....    LDM      r4,{r0-r2}
+        0x00000864:    4798        .G      BLX      r3
+        0x00000866:    3410        .4      ADDS     r4,r4,#0x10
+        0x00000868:    42ac        .B      CMP      r4,r5
+        0x0000086a:    d3f6        ..      BCC      0x85a ; __scatterload + 6
+        0x0000086c:    f7fffdac    ....    BL       __main_after_scatterload ; 0x3c8
+    $d
+        0x00000870:    000009c8    ....    DCD    2504
+        0x00000874:    000009e8    ....    DCD    2536
+    $t
+    i.__0printf$bare
+    __0printf$bare
+    __1printf$bare
+    __2printf
+        0x00000878:    4a01        .J      LDR      r2,[pc,#4] ; [0x880] = 0x7b9
+        0x0000087a:    4902        .I      LDR      r1,[pc,#8] ; [0x884] = 0x20000004
+        0x0000087c:    f000b813    ....    B.W      _printf_core ; 0x8a6
+    $d
+        0x00000880:    000007b9    ....    DCD    1977
+        0x00000884:    20000004    ...     DCD    536870916
+    $t
+    i.__scatterload_copy
+    __scatterload_copy
+        0x00000888:    e002        ..      B        0x890 ; __scatterload_copy + 8
+        0x0000088a:    c808        ..      LDM      r0!,{r3}
+        0x0000088c:    1f12        ..      SUBS     r2,r2,#4
+        0x0000088e:    c108        ..      STM      r1!,{r3}
+        0x00000890:    2a00        .*      CMP      r2,#0
+        0x00000892:    d1fa        ..      BNE      0x88a ; __scatterload_copy + 2
+        0x00000894:    4770        pG      BX       lr
+    i.__scatterload_null
+    __scatterload_null
+        0x00000896:    4770        pG      BX       lr
+    i.__scatterload_zeroinit
+    __scatterload_zeroinit
+        0x00000898:    2000        .       MOVS     r0,#0
+        0x0000089a:    e001        ..      B        0x8a0 ; __scatterload_zeroinit + 8
+        0x0000089c:    c101        ..      STM      r1!,{r0}
+        0x0000089e:    1f12        ..      SUBS     r2,r2,#4
+        0x000008a0:    2a00        .*      CMP      r2,#0
+        0x000008a2:    d1fb        ..      BNE      0x89c ; __scatterload_zeroinit + 4
+        0x000008a4:    4770        pG      BX       lr
+    i._printf_core
+    _printf_core
+        0x000008a6:    e92d41f0    -..A    PUSH     {r4-r8,lr}
+        0x000008aa:    4616        .F      MOV      r6,r2
+        0x000008ac:    460f        .F      MOV      r7,r1
+        0x000008ae:    4604        .F      MOV      r4,r0
+        0x000008b0:    2500        .%      MOVS     r5,#0
+        0x000008b2:    e003        ..      B        0x8bc ; _printf_core + 22
+        0x000008b4:    4639        9F      MOV      r1,r7
+        0x000008b6:    47b0        .G      BLX      r6
+        0x000008b8:    1c64        d.      ADDS     r4,r4,#1
+        0x000008ba:    1c6d        m.      ADDS     r5,r5,#1
+        0x000008bc:    7820         x      LDRB     r0,[r4,#0]
+        0x000008be:    2800        .(      CMP      r0,#0
+        0x000008c0:    d1f8        ..      BNE      0x8b4 ; _printf_core + 14
+        0x000008c2:    4628        (F      MOV      r0,r5
+        0x000008c4:    e8bd81f0    ....    POP      {r4-r8,pc}
+    $d.realdata
+    .conststring
+        0x000008c8:    20090920     ..     DCD    537463072
+        0x000008cc:    20202020            DCD    538976288
+        0x000008d0:    20202020            DCD    538976288
+        0x000008d4:    79706f43    Copy    DCD    2037411651
+        0x000008d8:    68676972    righ    DCD    1751607666
+        0x000008dc:    43282074    t (C    DCD    1126703220
+        0x000008e0:    30322029    ) 20    DCD    808591401
+        0x000008e4:    322d3431    14-2    DCD    841823281
+        0x000008e8:    20313230    021     DCD    540095024
+        0x000008ec:    69746946    Fiti    DCD    1769236806
+        0x000008f0:    65776f50    Powe    DCD    1702326096
+        0x000008f4:    65542072    r Te    DCD    1700012146
+        0x000008f8:    6f6e6863    chno    DCD    1869506659
+        0x000008fc:    79676f6c    logy    DCD    2036821868
+        0x00000900:    2e6f4320     Co.    DCD    779043616
+        0x00000904:    64744c2c    ,Ltd    DCD    1685343276
+        0x00000908:    2020202e    .       DCD    538976302
+        0x0000090c:    20202020            DCD    538976288
+        0x00000910:    20202020            DCD    538976288
+        0x00000914:    20202020            DCD    538976288
+        0x00000918:    0d202020       .    DCD    220209184
+        0x0000091c:    0000000a    ....    DCD    10
+        0x00000920:    2a2a0a0d    ..**    DCD    707398157
+        0x00000924:    2a2a2a2a    ****    DCD    707406378
+        0x00000928:    2a2a2a2a    ****    DCD    707406378
+        0x0000092c:    2a2a2a2a    ****    DCD    707406378
+        0x00000930:    2a2a2a2a    ****    DCD    707406378
+        0x00000934:    2a2a2a2a    ****    DCD    707406378
+        0x00000938:    2a2a2a2a    ****    DCD    707406378
+        0x0000093c:    2a2a2a2a    ****    DCD    707406378
+        0x00000940:    2a2a2a2a    ****    DCD    707406378
+        0x00000944:    2a2a2a2a    ****    DCD    707406378
+        0x00000948:    2a2a2a2a    ****    DCD    707406378
+        0x0000094c:    2a2a2a2a    ****    DCD    707406378
+        0x00000950:    2a2a2a2a    ****    DCD    707406378
+        0x00000954:    2a2a2a2a    ****    DCD    707406378
+        0x00000958:    2a2a2a2a    ****    DCD    707406378
+        0x0000095c:    2a2a2a2a    ****    DCD    707406378
+        0x00000960:    2a2a2a2a    ****    DCD    707406378
+        0x00000964:    2a2a2a2a    ****    DCD    707406378
+        0x00000968:    2a2a2a2a    ****    DCD    707406378
+        0x0000096c:    2a2a2a2a    ****    DCD    707406378
+        0x00000970:    2a2a2a2a    ****    DCD    707406378
+        0x00000974:    2a2a2a2a    ****    DCD    707406378
+        0x00000978:    2a2a2a2a    ****    DCD    707406378
+        0x0000097c:    00000a0d    ....    DCD    2573
+        0x00000980:    2d2d0a0d    ..--    DCD    757926413
+        0x00000984:    2d2d2d2d    ----    DCD    757935405
+        0x00000988:    2d2d2d2d    ----    DCD    757935405
+        0x0000098c:    49462d2d    --FI    DCD    1229335853
+        0x00000990:    455f4954    TI_E    DCD    1163872596
+        0x00000994:    5f55504d    MPU_    DCD    1599426637
+        0x00000998:    5020334d    M3 P    DCD    1344287565
+        0x0000099c:    70697265    erip    DCD    1885958757
+        0x000009a0:    61726568    hera    DCD    1634887016
+        0x000009a4:    4120736c    ls A    DCD    1092645740
+        0x000009a8:    696c7070    ppli    DCD    1768714352
+        0x000009ac:    69746163    cati    DCD    1769234787
+        0x000009b0:    20736e6f    ons     DCD    544435823
+        0x000009b4:    6f6d6544    Demo    DCD    1869440324
+        0x000009b8:    2d2d2d2d    ----    DCD    757935405
+        0x000009bc:    2d2d2d2d    ----    DCD    757935405
+        0x000009c0:    0a0d2d2d    --..    DCD    168635693
+        0x000009c4:    00000000    ....    DCD    0
+    Region$$Table$$Base
+        0x000009c8:    000009e8    ....    DCD    2536
+        0x000009cc:    20000000    ...     DCD    536870912
+        0x000009d0:    00000008    ....    DCD    8
+        0x000009d4:    00000888    ....    DCD    2184
+        0x000009d8:    000009f0    ....    DCD    2544
+        0x000009dc:    20000008    ...     DCD    536870920
+        0x000009e0:    00000400    ....    DCD    1024
+        0x000009e4:    00000898    ....    DCD    2200
+    Region$$Table$$Limit
+
+** Section #2 'RW_IRAM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 8 bytes (alignment 4)
+    Address: 0x20000000
+
+    0x20000000:   40 78 7d 01 00 00 00 00                            @x}.....
+
+
+** Section #3 'RW_IRAM1' (SHT_NOBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 1024 bytes (alignment 8)
+    Address: 0x20000008
+
+
+** Section #4 '.debug_abbrev' (SHT_PROGBITS)
+    Size   : 1476 bytes
+
+
+** Section #5 '.debug_frame' (SHT_PROGBITS)
+    Size   : 2996 bytes
+
+
+** Section #6 '.debug_info' (SHT_PROGBITS)
+    Size   : 13792 bytes
+
+
+** Section #7 '.debug_line' (SHT_PROGBITS)
+    Size   : 2800 bytes
+
+
+** Section #8 '.debug_loc' (SHT_PROGBITS)
+    Size   : 3396 bytes
+
+
+** Section #9 '.debug_macinfo' (SHT_PROGBITS)
+    Size   : 7840 bytes
+
+
+** Section #10 '.debug_pubnames' (SHT_PROGBITS)
+    Size   : 2322 bytes
+
+
+** Section #11 '.symtab' (SHT_SYMTAB)
+    Size   : 8624 bytes (alignment 4)
+    String table #12 '.strtab'
+    Last local symbol no. 395
+
+    Symbol table .symtab (538 symbols, 395 local)
+
+      #  Symbol Name                Value      Bind  Sec  Type  Vis  Size
+    ========================================================================
+
+      1  $d.realdata                0x00000000   Lc    1   --   De 
+      2  $t                         0x000003c0   Lc    1   --   De 
+      3  $d                         0x000003cc   Lc    1   --   De 
+      4  $t                         0x000003d4   Lc    1   --   De 
+      5  $d                         0x00000402   Lc    1   --   De 
+      6  $t                         0x0000040c   Lc    1   --   De 
+      7  $d                         0x0000042e   Lc    1   --   De 
+      8  $t                         0x00000440   Lc    1   --   De 
+      9  $d                         0x0000070c   Lc    1   --   De 
+     10  $t                         0x00000710   Lc    1   --   De 
+     11  $d                         0x00000744   Lc    1   --   De 
+     12  $t                         0x00000754   Lc    1   --   De 
+     13  $d                         0x00000794   Lc    1   --   De 
+     14  $t                         0x000007b8   Lc    1   --   De 
+     15  $d                         0x00000870   Lc    1   --   De 
+     16  $t                         0x00000878   Lc    1   --   De 
+     17  $d                         0x00000880   Lc    1   --   De 
+     18  $t                         0x00000888   Lc    1   --   De 
+     19  $d.realdata                0x000008c8   Lc    1   --   De 
+     20  $d.realdata                0x20000000   Lc    2   --   De 
+     21  ..\\CORE\\core_cm4.c       0x00000000   Lc  Abs  File  De 
+     22  ..\CORE\core_cm4.c         0x00000000   Lc  Abs  File  De 
+     23  ..\STARTUP\startup_FITI_CM4.s
+                                    0x00000000   Lc  Abs  File  De 
+     24  STACK                      0x20000008   Lc    3  Sect  De   0x400
+     25  RESET                      0x00000000   Lc    1  Sect  De   0x3c0
+     26  .text                      0x000003d4   Lc    1  Sect  De   0x38
+     27  $v0                        0x000003d4   Lc    1   --   De 
+     28  ..\\SYSTEM\\system_FITI_M4.c
+                                    0x00000000   Lc  Abs  File  De 
+     29  ..\SYSTEM\system_FITI_M4.c 0x00000000   Lc  Abs  File  De 
+     30  .text                      0x0000040c   Lc    1  Sect  De 
+     31  .data                      0x20000000   Lc    2  Sect  De   0x4
+     32  ..\\PERIPHERALS\\Sources\\FITI_M4_ddr3.c
+                                    0x00000000   Lc  Abs  File  De 
+     33  ..\PERIPHERALS\Sources\FITI_M4_ddr3.c
+                                    0x00000000   Lc  Abs  File  De 
+     34  ..\\PERIPHERALS\\Sources\\FITI_M4_ethernet.c
+                                    0x00000000   Lc  Abs  File  De 
+     35  ..\PERIPHERALS\Sources\FITI_M4_ethernet.c
+                                    0x00000000   Lc  Abs  File  De 
+     36  ..\\PERIPHERALS\\Sources\\FITI_M4_gpio.c
+                                    0x00000000   Lc  Abs  File  De 
+     37  ..\PERIPHERALS\Sources\FITI_M4_gpio.c
+                                    0x00000000   Lc  Abs  File  De 
+     38  .text                      0x00000440   Lc    1  Sect  De 
+     39  ..\\PERIPHERALS\\Sources\\FITI_M4_i2c.c
+                                    0x00000000   Lc  Abs  File  De 
+     40  ..\PERIPHERALS\Sources\FITI_M4_i2c.c
+                                    0x00000000   Lc  Abs  File  De 
+     41  ..\\PERIPHERALS\\Sources\\FITI_M4_misc.c
+                                    0x00000000   Lc  Abs  File  De 
+     42  ..\PERIPHERALS\Sources\FITI_M4_misc.c
+                                    0x00000000   Lc  Abs  File  De 
+     43  ..\\PERIPHERALS\\Sources\\FITI_M4_rtc.c
+                                    0x00000000   Lc  Abs  File  De 
+     44  ..\PERIPHERALS\Sources\FITI_M4_rtc.c
+                                    0x00000000   Lc  Abs  File  De 
+     45  ..\\PERIPHERALS\\Sources\\FITI_M4_spi.c
+                                    0x00000000   Lc  Abs  File  De 
+     46  ..\PERIPHERALS\Sources\FITI_M4_spi.c
+                                    0x00000000   Lc  Abs  File  De 
+     47  ..\\PERIPHERALS\\Sources\\FITI_M4_spi_flash.c
+                                    0x00000000   Lc  Abs  File  De 
+     48  ..\PERIPHERALS\Sources\FITI_M4_spi_flash.c
+                                    0x00000000   Lc  Abs  File  De 
+     49  ..\\PERIPHERALS\\Sources\\FITI_M4_timer.c
+                                    0x00000000   Lc  Abs  File  De 
+     50  ..\PERIPHERALS\Sources\FITI_M4_timer.c
+                                    0x00000000   Lc  Abs  File  De 
+     51  ..\\PERIPHERALS\\Sources\\FITI_M4_uart.c
+                                    0x00000000   Lc  Abs  File  De 
+     52  ..\PERIPHERALS\Sources\FITI_M4_uart.c
+                                    0x00000000   Lc  Abs  File  De 
+     53  .text                      0x000005b6   Lc    1  Sect  De 
+     54  ..\\PERIPHERALS\\Sources\\FITI_M4_wdog.c
+                                    0x00000000   Lc  Abs  File  De 
+     55  ..\PERIPHERALS\Sources\FITI_M4_wdog.c
+                                    0x00000000   Lc  Abs  File  De 
+     56  ..\\APP\\app.c             0x00000000   Lc  Abs  File  De 
+     57  ..\APP\app.c               0x00000000   Lc  Abs  File  De 
+     58  .text                      0x000006cc   Lc    1  Sect  De 
+     59  ..\\USER\\main.c           0x00000000   Lc  Abs  File  De 
+     60  ..\USER\main.c             0x00000000   Lc  Abs  File  De 
+     61  .text                      0x00000710   Lc    1  Sect  De 
+     62  .conststring               0x000008c8   Lc    1  Sect  De   0xfd
+     63  ..\\USER\\app_if.c         0x00000000   Lc  Abs  File  De 
+     64  ..\USER\app_if.c           0x00000000   Lc  Abs  File  De 
+     65  .text                      0x00000754   Lc    1  Sect  De 
+     66  ..\\USER\\malloc.c         0x00000000   Lc  Abs  File  De 
+     67  ..\USER\malloc.c           0x00000000   Lc  Abs  File  De 
+     68  ..\\USER\\retarget.c       0x00000000   Lc  Abs  File  De 
+     69  ..\USER\retarget.c         0x00000000   Lc  Abs  File  De 
+     70  .text                      0x000007b8   Lc    1  Sect  De 
+     71  .data                      0x20000004   Lc    2  Sect  De   0x4
+     72  ..\\USER\\FITI_M4_it.c     0x00000000   Lc  Abs  File  De 
+     73  ..\USER\FITI_M4_it.c       0x00000000   Lc  Abs  File  De 
+     74  .text                      0x000007fe   Lc    1  Sect  De 
+     75  ..\\CMSIS\\DSP\\src\\BasicMathFunctions\\BasicMathFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+     76  ..\CMSIS\DSP\src\BasicMathFunctions\BasicMathFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+     77  ..\\CMSIS\\DSP\\src\\BasicMathFunctions\\BasicMathFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+     78  ..\CMSIS\DSP\src\BasicMathFunctions\BasicMathFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+     79  ..\\CMSIS\\DSP\\src\\BayesFunctions\\BayesFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+     80  ..\CMSIS\DSP\src\BayesFunctions\BayesFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+     81  ..\\CMSIS\\DSP\\src\\BayesFunctions\\BayesFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+     82  ..\CMSIS\DSP\src\BayesFunctions\BayesFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+     83  ..\\CMSIS\\DSP\\src\\CommonTables\\CommonTables.c
+                                    0x00000000   Lc  Abs  File  De 
+     84  ..\CMSIS\DSP\src\CommonTables\CommonTables.c
+                                    0x00000000   Lc  Abs  File  De 
+     85  ..\\CMSIS\\DSP\\src\\CommonTables\\CommonTablesF16.c
+                                    0x00000000   Lc  Abs  File  De 
+     86  ..\CMSIS\DSP\src\CommonTables\CommonTablesF16.c
+                                    0x00000000   Lc  Abs  File  De 
+     87  ..\\CMSIS\\DSP\\src\\ComplexMathFunctions\\ComplexMathFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+     88  ..\CMSIS\DSP\src\ComplexMathFunctions\ComplexMathFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+     89  ..\\CMSIS\\DSP\\src\\ComplexMathFunctions\\ComplexMathFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+     90  ..\CMSIS\DSP\src\ComplexMathFunctions\ComplexMathFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+     91  ..\\CMSIS\\DSP\\src\\ControllerFunctions\\ControllerFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+     92  ..\CMSIS\DSP\src\ControllerFunctions\ControllerFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+     93  ..\\CMSIS\\DSP\\src\\DistanceFunctions\\DistanceFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+     94  ..\CMSIS\DSP\src\DistanceFunctions\DistanceFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+     95  ..\\CMSIS\\DSP\\src\\DistanceFunctions\\DistanceFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+     96  ..\CMSIS\DSP\src\DistanceFunctions\DistanceFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+     97  ..\\CMSIS\\DSP\\src\\FastMathFunctions\\FastMathFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+     98  ..\CMSIS\DSP\src\FastMathFunctions\FastMathFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+     99  ..\\CMSIS\\DSP\\src\\FastMathFunctions\\FastMathFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    100  ..\CMSIS\DSP\src\FastMathFunctions\FastMathFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    101  ..\\CMSIS\\DSP\\src\\FilteringFunctions\\FilteringFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    102  ..\CMSIS\DSP\src\FilteringFunctions\FilteringFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    103  ..\\CMSIS\\DSP\\src\\FilteringFunctions\\FilteringFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    104  ..\CMSIS\DSP\src\FilteringFunctions\FilteringFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    105  ..\\CMSIS\\DSP\\src\\InterpolationFunctions\\InterpolationFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    106  ..\CMSIS\DSP\src\InterpolationFunctions\InterpolationFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    107  ..\\CMSIS\\DSP\\src\\InterpolationFunctions\\InterpolationFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    108  ..\CMSIS\DSP\src\InterpolationFunctions\InterpolationFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    109  ..\\CMSIS\\DSP\\src\\MatrixFunctions\\MatrixFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    110  ..\CMSIS\DSP\src\MatrixFunctions\MatrixFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    111  ..\\CMSIS\\DSP\\src\\MatrixFunctions\\MatrixFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    112  ..\CMSIS\DSP\src\MatrixFunctions\MatrixFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    113  ..\\CMSIS\\DSP\\src\\QuaternionMathFunctions\\QuaternionMathFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    114  ..\CMSIS\DSP\src\QuaternionMathFunctions\QuaternionMathFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    115  ..\\CMSIS\\DSP\\src\\StatisticsFunctions\\StatisticsFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    116  ..\CMSIS\DSP\src\StatisticsFunctions\StatisticsFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    117  ..\\CMSIS\\DSP\\src\\StatisticsFunctions\\StatisticsFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    118  ..\CMSIS\DSP\src\StatisticsFunctions\StatisticsFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    119  ..\\CMSIS\\DSP\\src\\SupportFunctions\\SupportFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    120  ..\CMSIS\DSP\src\SupportFunctions\SupportFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    121  ..\\CMSIS\\DSP\\src\\SupportFunctions\\SupportFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    122  ..\CMSIS\DSP\src\SupportFunctions\SupportFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    123  ..\\CMSIS\\DSP\\src\\SVMFunctions\\SVMFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    124  ..\CMSIS\DSP\src\SVMFunctions\SVMFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    125  ..\\CMSIS\\DSP\\src\\SVMFunctions\\SVMFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    126  ..\CMSIS\DSP\src\SVMFunctions\SVMFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    127  ..\\CMSIS\\DSP\\src\\TransformFunctions\\TransformFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    128  ..\CMSIS\DSP\src\TransformFunctions\TransformFunctions.c
+                                    0x00000000   Lc  Abs  File  De 
+    129  ..\\CMSIS\\DSP\\src\\TransformFunctions\\TransformFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    130  ..\CMSIS\DSP\src\TransformFunctions\TransformFunctionsF16.c
+                                    0x00000000   Lc  Abs  File  De 
+    131  ..\\CMSIS\\NN\\src\\ActivationFunctions\\arm_nn_activations_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    132  ..\CMSIS\NN\src\ActivationFunctions\arm_nn_activations_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    133  ..\\CMSIS\\NN\\src\\ActivationFunctions\\arm_nn_activations_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    134  ..\CMSIS\NN\src\ActivationFunctions\arm_nn_activations_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    135  ..\\CMSIS\\NN\\src\\ActivationFunctions\\arm_relu_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    136  ..\CMSIS\NN\src\ActivationFunctions\arm_relu_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    137  ..\\CMSIS\\NN\\src\\ActivationFunctions\\arm_relu_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    138  ..\CMSIS\NN\src\ActivationFunctions\arm_relu_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    139  ..\\CMSIS\\NN\\src\\ActivationFunctions\\arm_relu6_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    140  ..\CMSIS\NN\src\ActivationFunctions\arm_relu6_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    141  ..\\CMSIS\\NN\\src\\BasicMathFunctions\\arm_elementwise_add_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    142  ..\CMSIS\NN\src\BasicMathFunctions\arm_elementwise_add_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    143  ..\\CMSIS\\NN\\src\\BasicMathFunctions\\arm_elementwise_add_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    144  ..\CMSIS\NN\src\BasicMathFunctions\arm_elementwise_add_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    145  ..\\CMSIS\\NN\\src\\BasicMathFunctions\\arm_elementwise_mul_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    146  ..\CMSIS\NN\src\BasicMathFunctions\arm_elementwise_mul_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    147  ..\\CMSIS\\NN\\src\\BasicMathFunctions\\arm_elementwise_mul_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    148  ..\CMSIS\NN\src\BasicMathFunctions\arm_elementwise_mul_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    149  ..\\CMSIS\\NN\\src\\ConcatenationFunctions\\arm_concatenation_s8_w.c
+                                    0x00000000   Lc  Abs  File  De 
+    150  ..\CMSIS\NN\src\ConcatenationFunctions\arm_concatenation_s8_w.c
+                                    0x00000000   Lc  Abs  File  De 
+    151  ..\\CMSIS\\NN\\src\\ConcatenationFunctions\\arm_concatenation_s8_x.c
+                                    0x00000000   Lc  Abs  File  De 
+    152  ..\CMSIS\NN\src\ConcatenationFunctions\arm_concatenation_s8_x.c
+                                    0x00000000   Lc  Abs  File  De 
+    153  ..\\CMSIS\\NN\\src\\ConcatenationFunctions\\arm_concatenation_s8_y.c
+                                    0x00000000   Lc  Abs  File  De 
+    154  ..\CMSIS\NN\src\ConcatenationFunctions\arm_concatenation_s8_y.c
+                                    0x00000000   Lc  Abs  File  De 
+    155  ..\\CMSIS\\NN\\src\\ConcatenationFunctions\\arm_concatenation_s8_z.c
+                                    0x00000000   Lc  Abs  File  De 
+    156  ..\CMSIS\NN\src\ConcatenationFunctions\arm_concatenation_s8_z.c
+                                    0x00000000   Lc  Abs  File  De 
+    157  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_1_x_n_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    158  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_1_x_n_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    159  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_1x1_HWC_q7_fast_nonsquare.c
+                                    0x00000000   Lc  Abs  File  De 
+    160  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_1x1_HWC_q7_fast_nonsquare.c
+                                    0x00000000   Lc  Abs  File  De 
+    161  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_1x1_s8_fast.c
+                                    0x00000000   Lc  Abs  File  De 
+    162  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_1x1_s8_fast.c
+                                    0x00000000   Lc  Abs  File  De 
+    163  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_fast_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    164  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_fast_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    165  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_HWC_q7_basic.c
+                                    0x00000000   Lc  Abs  File  De 
+    166  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_HWC_q7_basic.c
+                                    0x00000000   Lc  Abs  File  De 
+    167  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_HWC_q7_basic_nonsquare.c
+                                    0x00000000   Lc  Abs  File  De 
+    168  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_HWC_q7_basic_nonsquare.c
+                                    0x00000000   Lc  Abs  File  De 
+    169  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_HWC_q7_fast.c
+                                    0x00000000   Lc  Abs  File  De 
+    170  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_HWC_q7_fast.c
+                                    0x00000000   Lc  Abs  File  De 
+    171  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_HWC_q7_fast_nonsquare.c
+                                    0x00000000   Lc  Abs  File  De 
+    172  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_HWC_q7_fast_nonsquare.c
+                                    0x00000000   Lc  Abs  File  De 
+    173  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_HWC_q7_RGB.c
+                                    0x00000000   Lc  Abs  File  De 
+    174  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_HWC_q7_RGB.c
+                                    0x00000000   Lc  Abs  File  De 
+    175  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_HWC_q15_basic.c
+                                    0x00000000   Lc  Abs  File  De 
+    176  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_HWC_q15_basic.c
+                                    0x00000000   Lc  Abs  File  De 
+    177  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_HWC_q15_fast.c
+                                    0x00000000   Lc  Abs  File  De 
+    178  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_HWC_q15_fast.c
+                                    0x00000000   Lc  Abs  File  De 
+    179  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_HWC_q15_fast_nonsquare.c
+                                    0x00000000   Lc  Abs  File  De 
+    180  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_HWC_q15_fast_nonsquare.c
+                                    0x00000000   Lc  Abs  File  De 
+    181  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    182  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    183  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    184  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    185  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_wrapper_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    186  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_wrapper_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    187  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_convolve_wrapper_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    188  ..\CMSIS\NN\src\ConvolutionFunctions\arm_convolve_wrapper_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    189  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_depthwise_conv_3x3_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    190  ..\CMSIS\NN\src\ConvolutionFunctions\arm_depthwise_conv_3x3_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    191  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_depthwise_conv_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    192  ..\CMSIS\NN\src\ConvolutionFunctions\arm_depthwise_conv_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    193  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_depthwise_conv_s8_opt.c
+                                    0x00000000   Lc  Abs  File  De 
+    194  ..\CMSIS\NN\src\ConvolutionFunctions\arm_depthwise_conv_s8_opt.c
+                                    0x00000000   Lc  Abs  File  De 
+    195  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_depthwise_conv_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    196  ..\CMSIS\NN\src\ConvolutionFunctions\arm_depthwise_conv_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    197  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_depthwise_conv_u8_basic_ver1.c
+                                    0x00000000   Lc  Abs  File  De 
+    198  ..\CMSIS\NN\src\ConvolutionFunctions\arm_depthwise_conv_u8_basic_ver1.c
+                                    0x00000000   Lc  Abs  File  De 
+    199  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_depthwise_conv_wrapper_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    200  ..\CMSIS\NN\src\ConvolutionFunctions\arm_depthwise_conv_wrapper_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    201  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_depthwise_separable_conv_HWC_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    202  ..\CMSIS\NN\src\ConvolutionFunctions\arm_depthwise_separable_conv_HWC_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    203  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_depthwise_separable_conv_HWC_q7_nonsquare.c
+                                    0x00000000   Lc  Abs  File  De 
+    204  ..\CMSIS\NN\src\ConvolutionFunctions\arm_depthwise_separable_conv_HWC_q7_nonsquare.c
+                                    0x00000000   Lc  Abs  File  De 
+    205  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_nn_depthwise_conv_s8_core.c
+                                    0x00000000   Lc  Abs  File  De 
+    206  ..\CMSIS\NN\src\ConvolutionFunctions\arm_nn_depthwise_conv_s8_core.c
+                                    0x00000000   Lc  Abs  File  De 
+    207  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_nn_mat_mult_kernel_q7_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    208  ..\CMSIS\NN\src\ConvolutionFunctions\arm_nn_mat_mult_kernel_q7_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    209  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_nn_mat_mult_kernel_q7_q15_reordered.c
+                                    0x00000000   Lc  Abs  File  De 
+    210  ..\CMSIS\NN\src\ConvolutionFunctions\arm_nn_mat_mult_kernel_q7_q15_reordered.c
+                                    0x00000000   Lc  Abs  File  De 
+    211  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_nn_mat_mult_kernel_s8_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    212  ..\CMSIS\NN\src\ConvolutionFunctions\arm_nn_mat_mult_kernel_s8_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    213  ..\\CMSIS\\NN\\src\\ConvolutionFunctions\\arm_nn_mat_mult_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    214  ..\CMSIS\NN\src\ConvolutionFunctions\arm_nn_mat_mult_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    215  ..\\CMSIS\\NN\\src\\FullyConnectedFunctions\\arm_fully_connected_mat_q7_vec_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    216  ..\CMSIS\NN\src\FullyConnectedFunctions\arm_fully_connected_mat_q7_vec_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    217  ..\\CMSIS\\NN\\src\\FullyConnectedFunctions\\arm_fully_connected_mat_q7_vec_q15_opt.c
+                                    0x00000000   Lc  Abs  File  De 
+    218  ..\CMSIS\NN\src\FullyConnectedFunctions\arm_fully_connected_mat_q7_vec_q15_opt.c
+                                    0x00000000   Lc  Abs  File  De 
+    219  ..\\CMSIS\\NN\\src\\FullyConnectedFunctions\\arm_fully_connected_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    220  ..\CMSIS\NN\src\FullyConnectedFunctions\arm_fully_connected_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    221  ..\\CMSIS\\NN\\src\\FullyConnectedFunctions\\arm_fully_connected_q7_opt.c
+                                    0x00000000   Lc  Abs  File  De 
+    222  ..\CMSIS\NN\src\FullyConnectedFunctions\arm_fully_connected_q7_opt.c
+                                    0x00000000   Lc  Abs  File  De 
+    223  ..\\CMSIS\\NN\\src\\FullyConnectedFunctions\\arm_fully_connected_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    224  ..\CMSIS\NN\src\FullyConnectedFunctions\arm_fully_connected_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    225  ..\\CMSIS\\NN\\src\\FullyConnectedFunctions\\arm_fully_connected_q15_opt.c
+                                    0x00000000   Lc  Abs  File  De 
+    226  ..\CMSIS\NN\src\FullyConnectedFunctions\arm_fully_connected_q15_opt.c
+                                    0x00000000   Lc  Abs  File  De 
+    227  ..\\CMSIS\\NN\\src\\FullyConnectedFunctions\\arm_fully_connected_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    228  ..\CMSIS\NN\src\FullyConnectedFunctions\arm_fully_connected_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    229  ..\\CMSIS\\NN\\src\\FullyConnectedFunctions\\arm_fully_connected_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    230  ..\CMSIS\NN\src\FullyConnectedFunctions\arm_fully_connected_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    231  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_nn_accumulate_q7_to_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    232  ..\CMSIS\NN\src\NNSupportFunctions\arm_nn_accumulate_q7_to_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    233  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_nn_add_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    234  ..\CMSIS\NN\src\NNSupportFunctions\arm_nn_add_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    235  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_nn_depthwise_conv_nt_t_padded_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    236  ..\CMSIS\NN\src\NNSupportFunctions\arm_nn_depthwise_conv_nt_t_padded_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    237  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_nn_depthwise_conv_nt_t_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    238  ..\CMSIS\NN\src\NNSupportFunctions\arm_nn_depthwise_conv_nt_t_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    239  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_nn_mat_mul_core_1x_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    240  ..\CMSIS\NN\src\NNSupportFunctions\arm_nn_mat_mul_core_1x_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    241  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_nn_mat_mul_core_4x_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    242  ..\CMSIS\NN\src\NNSupportFunctions\arm_nn_mat_mul_core_4x_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    243  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_nn_mat_mul_kernel_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    244  ..\CMSIS\NN\src\NNSupportFunctions\arm_nn_mat_mul_kernel_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    245  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_nn_mat_mult_nt_t_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    246  ..\CMSIS\NN\src\NNSupportFunctions\arm_nn_mat_mult_nt_t_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    247  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_nn_mult_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    248  ..\CMSIS\NN\src\NNSupportFunctions\arm_nn_mult_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    249  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_nn_mult_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    250  ..\CMSIS\NN\src\NNSupportFunctions\arm_nn_mult_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    251  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_nn_vec_mat_mult_t_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    252  ..\CMSIS\NN\src\NNSupportFunctions\arm_nn_vec_mat_mult_t_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    253  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_nn_vec_mat_mult_t_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    254  ..\CMSIS\NN\src\NNSupportFunctions\arm_nn_vec_mat_mult_t_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    255  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_nn_vec_mat_mult_t_svdf_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    256  ..\CMSIS\NN\src\NNSupportFunctions\arm_nn_vec_mat_mult_t_svdf_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    257  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_nntables.c
+                                    0x00000000   Lc  Abs  File  De 
+    258  ..\CMSIS\NN\src\NNSupportFunctions\arm_nntables.c
+                                    0x00000000   Lc  Abs  File  De 
+    259  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_q7_to_q15_no_shift.c
+                                    0x00000000   Lc  Abs  File  De 
+    260  ..\CMSIS\NN\src\NNSupportFunctions\arm_q7_to_q15_no_shift.c
+                                    0x00000000   Lc  Abs  File  De 
+    261  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_q7_to_q15_reordered_no_shift.c
+                                    0x00000000   Lc  Abs  File  De 
+    262  ..\CMSIS\NN\src\NNSupportFunctions\arm_q7_to_q15_reordered_no_shift.c
+                                    0x00000000   Lc  Abs  File  De 
+    263  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_q7_to_q15_reordered_with_offset.c
+                                    0x00000000   Lc  Abs  File  De 
+    264  ..\CMSIS\NN\src\NNSupportFunctions\arm_q7_to_q15_reordered_with_offset.c
+                                    0x00000000   Lc  Abs  File  De 
+    265  ..\\CMSIS\\NN\\src\\NNSupportFunctions\\arm_q7_to_q15_with_offset.c
+                                    0x00000000   Lc  Abs  File  De 
+    266  ..\CMSIS\NN\src\NNSupportFunctions\arm_q7_to_q15_with_offset.c
+                                    0x00000000   Lc  Abs  File  De 
+    267  ..\\CMSIS\\NN\\src\\PoolingFunctions\\arm_avgpool_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    268  ..\CMSIS\NN\src\PoolingFunctions\arm_avgpool_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    269  ..\\CMSIS\\NN\\src\\PoolingFunctions\\arm_avgpool_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    270  ..\CMSIS\NN\src\PoolingFunctions\arm_avgpool_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    271  ..\\CMSIS\\NN\\src\\PoolingFunctions\\arm_max_pool_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    272  ..\CMSIS\NN\src\PoolingFunctions\arm_max_pool_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    273  ..\\CMSIS\\NN\\src\\PoolingFunctions\\arm_max_pool_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    274  ..\CMSIS\NN\src\PoolingFunctions\arm_max_pool_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    275  ..\\CMSIS\\NN\\src\\PoolingFunctions\\arm_pool_q7_HWC.c
+                                    0x00000000   Lc  Abs  File  De 
+    276  ..\CMSIS\NN\src\PoolingFunctions\arm_pool_q7_HWC.c
+                                    0x00000000   Lc  Abs  File  De 
+    277  ..\\CMSIS\\NN\\src\\ReshapeFunctions\\arm_reshape_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    278  ..\CMSIS\NN\src\ReshapeFunctions\arm_reshape_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    279  ..\\CMSIS\\NN\\src\\SoftmaxFunctions\\arm_nn_softmax_common_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    280  ..\CMSIS\NN\src\SoftmaxFunctions\arm_nn_softmax_common_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    281  ..\\CMSIS\\NN\\src\\SoftmaxFunctions\\arm_softmax_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    282  ..\CMSIS\NN\src\SoftmaxFunctions\arm_softmax_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    283  ..\\CMSIS\\NN\\src\\SoftmaxFunctions\\arm_softmax_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    284  ..\CMSIS\NN\src\SoftmaxFunctions\arm_softmax_q15.c
+                                    0x00000000   Lc  Abs  File  De 
+    285  ..\\CMSIS\\NN\\src\\SoftmaxFunctions\\arm_softmax_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    286  ..\CMSIS\NN\src\SoftmaxFunctions\arm_softmax_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    287  ..\\CMSIS\\NN\\src\\SoftmaxFunctions\\arm_softmax_s8_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    288  ..\CMSIS\NN\src\SoftmaxFunctions\arm_softmax_s8_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    289  ..\\CMSIS\\NN\\src\\SoftmaxFunctions\\arm_softmax_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    290  ..\CMSIS\NN\src\SoftmaxFunctions\arm_softmax_s16.c
+                                    0x00000000   Lc  Abs  File  De 
+    291  ..\\CMSIS\\NN\\src\\SoftmaxFunctions\\arm_softmax_u8.c
+                                    0x00000000   Lc  Abs  File  De 
+    292  ..\CMSIS\NN\src\SoftmaxFunctions\arm_softmax_u8.c
+                                    0x00000000   Lc  Abs  File  De 
+    293  ..\\CMSIS\\NN\\src\\SoftmaxFunctions\\arm_softmax_with_batch_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    294  ..\CMSIS\NN\src\SoftmaxFunctions\arm_softmax_with_batch_q7.c
+                                    0x00000000   Lc  Abs  File  De 
+    295  ..\\CMSIS\\NN\\src\\SVDFunctions\\arm_svdf_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    296  ..\CMSIS\NN\src\SVDFunctions\arm_svdf_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    297  ..\\CMSIS\\NN\\src\\SVDFunctions\\arm_svdf_state_s16_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    298  ..\CMSIS\NN\src\SVDFunctions\arm_svdf_state_s16_s8.c
+                                    0x00000000   Lc  Abs  File  De 
+    299  ../mathlib/exp.c           0x00000000   Lc  Abs  File  De 
+    300  ../mathlib/exp.c           0x00000000   Lc  Abs  File  De 
+    301  ../mathlib/expf.c          0x00000000   Lc  Abs  File  De 
+    302  ../mathlib/expf.c          0x00000000   Lc  Abs  File  De 
+    303  ../mathlib/fabs.c          0x00000000   Lc  Abs  File  De 
+    304  ../mathlib/log.c           0x00000000   Lc  Abs  File  De 
+    305  ../mathlib/log.c           0x00000000   Lc  Abs  File  De 
+    306  ../mathlib/logf.c          0x00000000   Lc  Abs  File  De 
+    307  ../mathlib/logf.c          0x00000000   Lc  Abs  File  De 
+    308  ../mathlib/powf.c          0x00000000   Lc  Abs  File  De 
+    309  ../mathlib/powf.c          0x00000000   Lc  Abs  File  De 
+    310  ../mathlib/sqrt.c          0x00000000   Lc  Abs  File  De 
+    311  ../mathlib/sqrt.c          0x00000000   Lc  Abs  File  De 
+    312  ../mathlib/sqrtf.c         0x00000000   Lc  Abs  File  De 
+    313  ../mathlib/sqrtf.c         0x00000000   Lc  Abs  File  De 
+    314  ../mathlib/tanhf.c         0x00000000   Lc  Abs  File  De 
+    315  ../mathlib/tanhf.c         0x00000000   Lc  Abs  File  De 
+    316  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    317  .ARM.Collect$$$$00000000   0x000003c0   Lc    1  Sect  De 
+    318  dc.s                       0x00000000   Lc  Abs  File  De 
+    319  ../clib/microlib/division.c
+                                    0x00000000   Lc  Abs  File  De 
+    320  ../clib/microlib/division.c
+                                    0x00000000   Lc  Abs  File  De 
+    321  ../clib/microlib/longlong.c
+                                    0x00000000   Lc  Abs  File  De 
+    322  ../clib/microlib/longlong.c
+                                    0x00000000   Lc  Abs  File  De 
+    323  ../clib/microlib/string/memcpy.c
+                                    0x00000000   Lc  Abs  File  De 
+    324  ../clib/microlib/string/memcpy.c
+                                    0x00000000   Lc  Abs  File  De 
+    325  ../clib/microlib/string/memset.c
+                                    0x00000000   Lc  Abs  File  De 
+    326  ../clib/microlib/string/memcpy.c
+                                    0x00000000   Lc  Abs  File  De 
+    327  ../clib/microlib/string/memcpy.c
+                                    0x00000000   Lc  Abs  File  De 
+    328  ../clib/microlib/printf/printf.c
+                                    0x00000000   Lc  Abs  File  De 
+    329  i.__0printf$bare           0x00000878   Lc    1  Sect  De 
+    330  i._printf_core             0x000008a6   Lc    1  Sect  De 
+    331  _printf_core               0x000008a7   Lc    1  Code  De   0x22
+    332  ../clib/microlib/printf/printf.c
+                                    0x00000000   Lc  Abs  File  De 
+    333  ../clib/microlib/printf/printf.c
+                                    0x00000000   Lc  Abs  File  De 
+    334  ../clib/microlib/printf/printf.c
+                                    0x00000000   Lc  Abs  File  De 
+    335  ../clib/microlib/printf/printf.c
+                                    0x00000000   Lc  Abs  File  De 
+    336  ../clib/microlib/printf/printf.c
+                                    0x00000000   Lc  Abs  File  De 
+    337  ../clib/microlib/printf/printf.c
+                                    0x00000000   Lc  Abs  File  De 
+    338  ../clib/microlib/printf/printf.c
+                                    0x00000000   Lc  Abs  File  De 
+    339  ../clib/microlib/printf/printf.c
+                                    0x00000000   Lc  Abs  File  De 
+    340  ../clib/microlib/printf/printf.c
+                                    0x00000000   Lc  Abs  File  De 
+    341  ../clib/microlib/printf/printf.c
+                                    0x00000000   Lc  Abs  File  De 
+    342  ../clib/microlib/stubs.s   0x00000000   Lc  Abs  File  De 
+    343  ../fplib/microlib/fpadd.c  0x00000000   Lc  Abs  File  De 
+    344  ../fplib/microlib/fpmul.c  0x00000000   Lc  Abs  File  De 
+    345  ../fplib/microlib/fpdiv.c  0x00000000   Lc  Abs  File  De 
+    346  ../fplib/microlib/fpneg.c  0x00000000   Lc  Abs  File  De 
+    347  ../fplib/microlib/fpflt.c  0x00000000   Lc  Abs  File  De 
+    348  ../fplib/microlib/fpfix.c  0x00000000   Lc  Abs  File  De 
+    349  cdcmple.s                  0x00000000   Lc  Abs  File  De 
+    350  cdrcmple.s                 0x00000000   Lc  Abs  File  De 
+    351  ../fplib/microlib/d2f.c    0x00000000   Lc  Abs  File  De 
+    352  ../mathlib/dunder.c        0x00000000   Lc  Abs  File  De 
+    353  ../mathlib/fpclassify.c    0x00000000   Lc  Abs  File  De 
+    354  ../mathlib/fpclassifyf.c   0x00000000   Lc  Abs  File  De 
+    355  ../mathlib/funder.c        0x00000000   Lc  Abs  File  De 
+    356  ../mathlib/poly.c          0x00000000   Lc  Abs  File  De 
+    357  ../mathlib/qnan.c          0x00000000   Lc  Abs  File  De 
+    358  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    359  .ARM.Collect$$$$00000001   0x000003c0   Lc    1  Sect  De   0x4
+    360  .ARM.Collect$$$$00002712   0x000003d0   Lc    1  Sect  De   0x4
+    361  __lit__00000000            0x000003d0   Lc    1  Data  De   0x4
+    362  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    363  .ARM.Collect$$$$00000004   0x000003c4   Lc    1  Sect  De   0x4
+    364  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    365  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    366  .ARM.Collect$$$$00000008   0x000003c8   Lc    1  Sect  De 
+    367  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    368  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    369  .ARM.Collect$$$$0000000A   0x000003c8   Lc    1  Sect  De 
+    370  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    371  .ARM.Collect$$$$0000000B   0x000003c8   Lc    1  Sect  De   0x8
+    372  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    373  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    374  .ARM.Collect$$$$0000000D   0x000003d0   Lc    1  Sect  De 
+    375  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    376  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    377  .ARM.Collect$$$$0000000F   0x000003d0   Lc    1  Sect  De 
+    378  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    379  ../clib/microlib/division.c
+                                    0x00000000   Lc  Abs  File  De 
+    380  ../clib/microlib/longlong.c
+                                    0x00000000   Lc  Abs  File  De 
+    381  ../clib/microlib/errno.c   0x00000000   Lc  Abs  File  De 
+    382  ../clib/microlib/stubs.s   0x00000000   Lc  Abs  File  De 
+    383  ../fplib/microlib/fpepilogue.c
+                                    0x00000000   Lc  Abs  File  De 
+    384  ../fplib/microlib/fpepilogue.c
+                                    0x00000000   Lc  Abs  File  De 
+    385  ../fplib/microlib/fpsqrt.c 0x00000000   Lc  Abs  File  De 
+    386  ../fplib/microlib/fpflt.c  0x00000000   Lc  Abs  File  De 
+    387  ../fplib/microlib/fpfix.c  0x00000000   Lc  Abs  File  De 
+    388  ../fplib/microlib/fpfix.c  0x00000000   Lc  Abs  File  De 
+    389  ../fplib/microlib/fpstat.c 0x00000000   Lc  Abs  File  De 
+    390  init.s                     0x00000000   Lc  Abs  File  De 
+    391  .text                      0x00000854   Lc    1  Sect  De   0x24
+    392  handlers.s                 0x00000000   Lc  Abs  File  De 
+    393  i.__scatterload_copy       0x00000888   Lc    1  Sect  De   0xe
+    394  i.__scatterload_null       0x00000896   Lc    1  Sect  De   0x2
+    395  i.__scatterload_zeroinit   0x00000898   Lc    1  Sect  De   0xe
+    396  BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$IEEEX$EBA8$MICROLIB$REQ8$PRES8$EABIv2
+                                    0x00000000   Gb  Abs   --   Hi 
+    397  __ARM_use_no_argv          0x00000000   Gb  Abs   --   Hi 
+    398  __Vectors                  0x00000000   Gb    1  Data  Hi   0x4
+    399  __use_no_errno             0x00000000   Gb  Abs   --   Hi 
+    400  __use_no_exception_handling
+                                    0x00000000   Gb  Abs   --   Hi 
+    401  __use_no_fp                0x00000000   Gb  Abs   --   Hi 
+    402  __use_no_heap              0x00000000   Gb  Abs   --   Hi 
+    403  __use_no_heap_region       0x00000000   Gb  Abs   --   Hi 
+    404  __use_no_semihosting       0x00000000   Gb  Abs   --   Hi 
+    405  __use_no_semihosting_swi   0x00000000   Gb  Abs   --   Hi 
+    406  __use_no_signal_handling   0x00000000   Gb  Abs   --   Hi 
+    407  __Vectors_End              0x000003c0   Gb    1  Data  Hi 
+    408  __Vectors_Size             0x000003c0   Gb  Abs   --   Hi 
+    409  __main                     0x000003c1   Gb    1  Code  Hi 
+    410  _main_stk                  0x000003c1   Gb    1  Code  Hi 
+    411  _main_scatterload          0x000003c5   Gb    1  Code  Hi 
+    412  __main_after_scatterload   0x000003c9   Gb    1  Code  Hi 
+    413  _main_clock                0x000003c9   Gb    1  Code  Hi 
+    414  _main_cpp_init             0x000003c9   Gb    1  Code  Hi 
+    415  _main_init                 0x000003c9   Gb    1  Code  Hi 
+    416  __rt_final_cpp             0x000003d1   Gb    1  Code  Hi 
+    417  __rt_final_exit            0x000003d1   Gb    1  Code  Hi 
+    418  Reset_Handler              0x000003d5   Wk    1  Code  Hi   0x8
+    419  SysTick_Handler            0x000003ed   Wk    1  Code  Hi   0x2
+    420  Interrupt0_Handler         0x000003ef   Wk    1  Code  Hi   0x2
+    421  Interrupt1_Handler         0x000003f1   Wk    1  Code  Hi   0x2
+    422  Interrupt2_Handler         0x000003f3   Wk    1  Code  Hi   0x2
+    423  Interrupt3_Handler         0x000003f5   Wk    1  Code  Hi   0x2
+    424  Interrupt4_Handler         0x000003f7   Wk    1  Code  Hi   0x2
+    425  Interrupt5_Handler         0x000003f9   Wk    1  Code  Hi   0x2
+    426  Interrupt6_Handler         0x000003fb   Wk    1  Code  Hi   0x2
+    427  Interrupt7_Handler         0x000003fd   Wk    1  Code  Hi   0x2
+    428  Interrupt8_Handler         0x000003ff   Wk    1  Code  Hi   0x2
+    429  Interrupt9_Handler         0x00000401   Wk    1  Code  Hi   0x2
+    430  SystemCoreClockUpdate      0x0000040d   Gb    1  Code  Hi   0x8
+    431  SystemInit                 0x00000415   Gb    1  Code  Hi   0x1a
+    432  GPIO_Init                  0x00000441   Gb    1  Code  Hi   0xb4
+    433  GPIO_SetOutEnable          0x000004f5   Gb    1  Code  Hi   0x8
+    434  GPIO_ClrOutEnable          0x000004fd   Gb    1  Code  Hi   0x4
+    435  GPIO_SetBit                0x00000501   Gb    1  Code  Hi   0x8
+    436  GPIO_ResetBit              0x00000509   Gb    1  Code  Hi   0x8
+    437  GPIO_WriteBits             0x00000511   Gb    1  Code  Hi   0x4
+    438  GPIO_ReadBits              0x00000515   Gb    1  Code  Hi   0x4
+    439  GPIO_GetOutEnable          0x00000519   Gb    1  Code  Hi   0x4
+    440  GPIO_SetAltFunc            0x0000051d   Gb    1  Code  Hi   0x8
+    441  GPIO_ClrAltFunc            0x00000525   Gb    1  Code  Hi   0x4
+    442  GPIO_GetAltFunc            0x00000529   Gb    1  Code  Hi   0x4
+    443  GPIO_IntClear              0x0000052d   Gb    1  Code  Hi   0x8
+    444  GPIO_GetIntStatus          0x00000535   Gb    1  Code  Hi   0x4
+    445  GPIO_SetIntEnable          0x00000539   Gb    1  Code  Hi   0xa
+    446  GPIO_ClrIntEnable          0x00000543   Gb    1  Code  Hi   0xa
+    447  GPIO_SetIntHighLevel       0x0000054d   Gb    1  Code  Hi   0x14
+    448  GPIO_SetIntRisingEdge      0x00000561   Gb    1  Code  Hi   0x14
+    449  GPIO_SetIntLowLevel        0x00000575   Gb    1  Code  Hi   0x14
+    450  GPIO_SetIntFallingEdge     0x00000589   Gb    1  Code  Hi   0x14
+    451  GPIO_MaskedWrite           0x0000059d   Gb    1  Code  Hi   0x1a
+    452  UART_Init                  0x000005b7   Gb    1  Code  Hi   0x6c
+    453  UART_GetRxBufferFull       0x00000623   Gb    1  Code  Hi   0x8
+    454  UART_GetTxBufferFull       0x0000062b   Gb    1  Code  Hi   0x8
+    455  UART_GetRxBufferOverrunStatus
+                                    0x00000633   Gb    1  Code  Hi   0x8
+    456  UART_GetTxBufferOverrunStatus
+                                    0x0000063b   Gb    1  Code  Hi   0x8
+    457  UART_ClearRxBufferOverrunStatus
+                                    0x00000643   Gb    1  Code  Hi   0x6
+    458  UART_ClearTxBufferOverrunStatus
+                                    0x00000649   Gb    1  Code  Hi   0x6
+    459  UART_SendChar              0x0000064f   Gb    1  Code  Hi   0xa
+    460  UART_SendString            0x00000659   Gb    1  Code  Hi   0x18
+    461  UART_ReceiveChar           0x00000671   Gb    1  Code  Hi   0xc
+    462  UART_GetBaudDivider        0x0000067d   Gb    1  Code  Hi   0x4
+    463  UART_GetTxIRQStatus        0x00000681   Gb    1  Code  Hi   0x8
+    464  UART_GetRxIRQStatus        0x00000689   Gb    1  Code  Hi   0x8
+    465  UART_ClearTxIRQ            0x00000691   Gb    1  Code  Hi   0x6
+    466  UART_ClearRxIRQ            0x00000697   Gb    1  Code  Hi   0x6
+    467  UART_GetTxOverrunIRQStatus 0x0000069d   Gb    1  Code  Hi   0x8
+    468  UART_GetRxOverrunIRQStatus 0x000006a5   Gb    1  Code  Hi   0x8
+    469  UART_ClearTxOverrunIRQ     0x000006ad   Gb    1  Code  Hi   0x6
+    470  UART_ClearRxOverrunIRQ     0x000006b3   Gb    1  Code  Hi   0x6
+    471  UART_SetHSTM               0x000006b9   Gb    1  Code  Hi   0xa
+    472  UART_ClrHSTM               0x000006c3   Gb    1  Code  Hi   0xa
+    473  led_app                    0x000006cd   Gb    1  Code  Hi   0x40
+    474  main                       0x00000711   Gb    1  Code  Hi   0x34
+    475  UartInit                   0x00000755   Gb    1  Code  Hi   0x30
+    476  app_call_if                0x00000785   Gb    1  Code  Hi   0x10
+    477  fputc                      0x000007b9   Gb    1  Code  Hi   0x1a
+    478  fgetc                      0x000007d3   Gb    1  Code  Hi   0xe
+    479  _ttywrch                   0x000007e1   Gb    1  Code  Hi   0x16
+    480  _ferror                    0x000007f7   Gb    1  Code  Hi   0x6
+    481  _sys_exit                  0x000007fd   Gb    1  Code  Hi   0x2
+    482  NMI_Handler                0x000007ff   Gb    1  Code  Hi   0x2
+    483  HardFault_Handler          0x00000801   Gb    1  Code  Hi   0x2
+    484  MemManage_Handler          0x00000803   Gb    1  Code  Hi   0x2
+    485  BusFault_Handler           0x00000805   Gb    1  Code  Hi   0x2
+    486  UsageFault_Handler         0x00000807   Gb    1  Code  Hi   0x2
+    487  SVC_Handler                0x00000809   Gb    1  Code  Hi   0x2
+    488  DebugMon_Handler           0x0000080b   Gb    1  Code  Hi   0x2
+    489  PendSV_Handler             0x0000080d   Gb    1  Code  Hi   0x2
+    490  UART1_Handler              0x0000080f   Gb    1  Code  Hi   0x2
+    491  TIMER1_Handler             0x00000811   Gb    1  Code  Hi   0x2
+    492  GPIO0_Handler              0x00000813   Gb    1  Code  Hi   0x2
+    493  GPIO0_0_Handler            0x00000815   Gb    1  Code  Hi   0x2
+    494  GPIO0_1_Handler            0x00000817   Gb    1  Code  Hi   0x2
+    495  GPIO0_2_Handler            0x00000819   Gb    1  Code  Hi   0x2
+    496  GPIO0_3_Handler            0x0000081b   Gb    1  Code  Hi   0x2
+    497  GPIO0_4_Handler            0x0000081d   Gb    1  Code  Hi   0x2
+    498  GPIO0_5_Handler            0x0000081f   Gb    1  Code  Hi   0x2
+    499  GPIO0_6_Handler            0x00000821   Gb    1  Code  Hi   0x2
+    500  GPIO0_7_Handler            0x00000823   Gb    1  Code  Hi   0x2
+    501  GPIO0_8_Handler            0x00000825   Gb    1  Code  Hi   0x2
+    502  GPIO0_9_Handler            0x00000827   Gb    1  Code  Hi   0x2
+    503  GPIO0_10_Handler           0x00000829   Gb    1  Code  Hi   0x2
+    504  GPIO0_11_Handler           0x0000082b   Gb    1  Code  Hi   0x2
+    505  GPIO0_12_Handler           0x0000082d   Gb    1  Code  Hi   0x2
+    506  GPIO0_13_Handler           0x0000082f   Gb    1  Code  Hi   0x2
+    507  GPIO0_14_Handler           0x00000831   Gb    1  Code  Hi   0x2
+    508  GPIO0_15_Handler           0x00000833   Gb    1  Code  Hi   0x2
+    509  USER_INT0_Handler          0x00000835   Gb    1  Code  Hi   0x2
+    510  USER_INT1_Handler          0x00000837   Gb    1  Code  Hi   0x2
+    511  USER_INT2_Handler          0x00000839   Gb    1  Code  Hi   0x2
+    512  USER_INT3_Handler          0x0000083b   Gb    1  Code  Hi   0x2
+    513  USER_INT4_Handler          0x0000083d   Gb    1  Code  Hi   0x2
+    514  USER_INT5_Handler          0x0000083f   Gb    1  Code  Hi   0x2
+    515  USER_INT6_Handler          0x00000841   Gb    1  Code  Hi   0x2
+    516  USER_INT7_Handler          0x00000843   Gb    1  Code  Hi   0x2
+    517  USER_INT8_Handler          0x00000845   Gb    1  Code  Hi   0x2
+    518  USER_INT9_Handler          0x00000847   Gb    1  Code  Hi   0x2
+    519  USER_INT10_Handler         0x00000849   Gb    1  Code  Hi   0x2
+    520  USER_INT11_Handler         0x0000084b   Gb    1  Code  Hi   0x2
+    521  USER_INT12_Handler         0x0000084d   Gb    1  Code  Hi   0x2
+    522  USER_INT13_Handler         0x0000084f   Gb    1  Code  Hi   0x2
+    523  USER_INT14_Handler         0x00000851   Gb    1  Code  Hi   0x2
+    524  USER_INT15_Handler         0x00000853   Gb    1  Code  Hi   0x2
+    525  __scatterload              0x00000855   Gb    1  Code  Hi   0x1c
+    526  __scatterload_rt2          0x00000855   Gb    1  Code  Hi 
+    527  __0printf$bare             0x00000879   Gb    1  Code  Hi   0x8
+    528  __1printf$bare             0x00000879   Gb    1  Code  Hi 
+    529  __2printf                  0x00000879   Gb    1  Code  Hi 
+    530  __scatterload_copy         0x00000889   Gb    1  Code  Hi   0xe
+    531  __scatterload_null         0x00000897   Gb    1  Code  Hi   0x2
+    532  __scatterload_zeroinit     0x00000899   Gb    1  Code  Hi   0xe
+    533  Region$$Table$$Base        0x000009c8   Gb    1   --   Hi 
+    534  Region$$Table$$Limit       0x000009e8   Gb    1   --   Hi 
+    535  SystemCoreClock            0x20000000   Gb    2  Data  Hi   0x4
+    536  __stdout                   0x20000004   Gb    2  Data  Hi   0x4
+    537  __stack_limit              0x20000008   Gb    3  Data  Hi 
+    538  __initial_sp               0x20000408   Gb    3  Data  Hi 
+
+
+** Section #12 '.strtab' (SHT_STRTAB)
+    Size   : 19236 bytes
+
+
+** Section #13 '.note' (SHT_NOTE)
+    Size   : 28 bytes (alignment 4)
+
+
+** Section #14 '.comment' (SHT_PROGBITS)
+    Size   : 162180 bytes
+
+
+** Section #15 '.shstrtab' (SHT_STRTAB)
+    Size   : 156 bytes
+
+
