@@ -29,6 +29,10 @@
 #include "FITI_M4_spi_flash.h"		//SPI-Flash
 #include "FITI_M4_misc.h"			  //NVIC
 
+#define I2C_MODULE_ENABLED
+#include "Fiti_System_I2c.h"
+
+
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 /* Uncomment the line below to expanse the "assert_param" macro in the 

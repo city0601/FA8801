@@ -82,6 +82,26 @@ typedef enum
   SUCCESS = !ERROR
 }ErrorStatus;
 
+/* Need tot merge */
+typedef enum 
+{
+  I2C_RESET = 0x00, 
+  I2C_SET = 0x01
+} flag_status;
+
+typedef enum 
+{
+  FALSE = 0, 
+  TRUE = !FALSE
+} confirm_state;
+
+typedef enum 
+{
+  I2C_ERROR = 0, 
+  I2C_SUCCESS = 0x01
+} error_status;
+
+
 /**
   * @}
   */

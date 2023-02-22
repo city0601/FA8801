@@ -1,6 +1,6 @@
 /**
   **************************************************************************
-  * @file     FA8801_i2c.c
+  * @file     Fiti_System_I2c.c
   * @brief    contains all the functions for the i2c firmware library
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -22,10 +22,11 @@
   **************************************************************************
   */
 
-#include "FITI_M4.h"
-#include "FA8801_i2c.h"
+#include "FITI_M4_conf.h"
 
-/** @addtogroup FA8801_periph_driver
+
+
+/** @addtogroup Fiti_System_I2c_driver
   * @{
   */
 
@@ -34,13 +35,34 @@
   * @{
   */
 
-#define I2C_MODULE_ENABLED
-
 #ifdef I2C_MODULE_ENABLED
 
 /** @defgroup I2C_private_functions
   * @{
   */
+
+/**
+  * @brief  reset the i2c register
+  * @param  i2c_x: to select the i2c peripheral.
+  *         this parameter can be one of the following values:
+  *         I2C1, I2C2.
+  * @retval none
+  */
+void i2c_reset(i2c_type *i2c_x)
+{
+  // if(i2c_x == I2C1)
+  // {
+  //   crm_periph_reset(CRM_I2C1_PERIPH_RESET, TRUE);
+  //   crm_periph_reset(CRM_I2C1_PERIPH_RESET, FALSE);
+  // }
+  // else if(i2c_x == I2C2)
+  // {
+  //   crm_periph_reset(CRM_I2C2_PERIPH_RESET, TRUE);
+  //   crm_periph_reset(CRM_I2C2_PERIPH_RESET, FALSE);
+  // }
+  i2c_x->ctrl1_bit.swrst = TRUE;
+
+}
 
 /**
   * @brief  init i2c digit filters and clock control register.
@@ -57,12 +79,13 @@ void i2c_init(i2c_type *i2c_x, uint8_t dfilters, uint32_t clk)
   i2c_x->ctrl1_bit.i2cen = FALSE;
 
   /* write clkctrl register*/
-  i2c_x->clkctrl_bit.ccr = clk;
+  i2c_x->clkctrl = clk;
 
   /* write digital filter register*/
-  i2c_x->ctrl1_bit.dfltval = dfilters;
+  i2c_dflt_val_set(i2c_x, dfilters);
 
-  i2c_dfilter_enable(i2c_x, TRUE);
+  /* disable i2c peripheral */  
+  i2c_dflt_enable(i2c_x, TRUE);
 }
 
 /**
@@ -103,6 +126,32 @@ void i2c_dma_enable(i2c_type *i2c_x, i2c_dma_request_type dma_req, confirm_state
 }
 
 /**
+  * @brief  enable or disable slave data control.
+  * @param  i2c_x: to select the i2c peripheral.
+  *         this parameter can be one of the following values:
+  *         I2C1, I2C2.
+  * @param  new_state (TRUE or FALSE).
+  * @retval none
+  */
+void i2c_slave_data_ctrl_enable(i2c_type *i2c_x, confirm_state new_state)
+{
+  i2c_x->ctrl1_bit.slvctrlen = new_state;
+}
+
+/**
+  * @brief  enable or disable clock stretch.
+  * @param  i2c_x: to select the i2c peripheral.
+  *         this parameter can be one of the following values:
+  *         I2C1, I2C2.
+  * @param  new_state (TRUE or FALSE).
+  * @retval none
+  */
+void i2c_clock_stretch_enable(i2c_type *i2c_x, confirm_state new_state)
+{
+  i2c_x->ctrl1_bit.stretchen = (!new_state);
+}
+
+/**
   * @brief  enable or disable general call mode.
   * @param  i2c_x: to select the i2c peripheral.
   *         this parameter can be one of the following values:
@@ -112,8 +161,36 @@ void i2c_dma_enable(i2c_type *i2c_x, i2c_dma_request_type dma_req, confirm_state
   */
 void i2c_general_call_enable(i2c_type *i2c_x, confirm_state new_state)
 {
-  i2c_x->ctrl1_bit.gcen = new_state;
+  i2c_x->ctrl1_bit.gcaen = new_state;
 }
+
+/**
+  * @brief  Set SDA/SCL digital filter value.
+  * @param  i2c_x: to select the i2c peripheral.
+  *         this parameter can be one of the following values:
+  *         I2C1, I2C2.
+  * @param  dfilters: number of digit filters (0x00~0x0F).
+  * @param  new_state (TRUE or FALSE).
+  * @retval none
+  */
+void i2c_dflt_val_set(i2c_type *i2c_x, uint8_t dfilters)
+{
+  i2c_x->ctrl1_bit.dfltval = dfilters;
+}
+
+/**
+  * @brief  Enable/disable SDA/SCL digital filter.
+  * @param  i2c_x: to select the i2c peripheral.
+  *         this parameter can be one of the following values:
+  *         I2C1, I2C2.
+  * @param  new_state (TRUE or FALSE).
+  * @retval none
+  */
+void i2c_dflt_enable(i2c_type *i2c_x, confirm_state new_state)
+{
+  i2c_x->ctrl1_bit.dflten = new_state;
+}
+
 
 /**
   * @brief  enable or disable cnt reload mode.
@@ -129,65 +206,16 @@ void i2c_reload_enable(i2c_type *i2c_x, confirm_state new_state)
 }
 
 /**
-  * @brief  enable or disable digital filter.
+  * @brief  enable or disable auto send stop mode.
   * @param  i2c_x: to select the i2c peripheral.
   *         this parameter can be one of the following values:
   *         I2C1, I2C2.
   * @param  new_state (TRUE or FALSE).
   * @retval none
   */
-void i2c_dfilter_enable(i2c_type *i2c_x, confirm_state new_state)
+void i2c_auto_stop_enable(i2c_type *i2c_x, confirm_state new_state)
 {
-  i2c_x->ctrl1_bit.dflten = new_state;
-}
-
-/**
-  * @brief  enable or disable clock stretch.
-  * @param  i2c_x: to select the i2c peripheral.
-  *         this parameter can be one of the following values:
-  *         I2C1, I2C2.
-  * @param  new_state (TRUE or FALSE).
-  * @retval none
-  */
-void i2c_clock_stretch_enable(i2c_type *i2c_x, confirm_state new_state)
-{
-  i2c_x->ctrl1_bit.stretchen = new_state;
-}
-
-/**
-  * @brief  enable or disable ack.
-  * @param  i2c_x: to select the i2c peripheral.
-  *         this parameter can be one of the following values:
-  *         I2C1, I2C2.
-  * @param  new_state (TRUE or FALSE).
-  * @retval none.
-  */
-void i2c_ack_enable(i2c_type *i2c_x, confirm_state new_state)
-{
-  i2c_x->ctrl1_bit.acken  = new_state;
-}
-
-/**
-  * @brief  reset the i2c register
-  * @param  i2c_x: to select the i2c peripheral.
-  *         this parameter can be one of the following values:
-  *         I2C1, I2C2.
-  * @retval none
-  */
-void i2c_reset(i2c_type *i2c_x)
-{
-  if(i2c_x == I2C1)
-  {
-    // crm_periph_reset(CRM_I2C1_PERIPH_RESET, TRUE);
-    // crm_periph_reset(CRM_I2C1_PERIPH_RESET, FALSE);
-    i2c_x->ctrl1_bit.swrst  = TRUE;
-  }
-  else if(i2c_x == I2C2)
-  {
-    // crm_periph_reset(CRM_I2C2_PERIPH_RESET, TRUE);
-    // crm_periph_reset(CRM_I2C2_PERIPH_RESET, FALSE);
-    i2c_x->ctrl1_bit.swrst  = TRUE;
-  }
+  i2c_x->ctrl1_bit.astopen = new_state;
 }
 
 /**
@@ -232,16 +260,29 @@ void i2c_transfer_dir_set(i2c_type *i2c_x, i2c_transfer_dir_type i2c_direction)
 }
 
 /**
-  * @brief   enable or disable slave data control.
+  * @brief  enable or disable 10-bit address mode (master transfer).
   * @param  i2c_x: to select the i2c peripheral.
   *         this parameter can be one of the following values:
   *         I2C1, I2C2.
   * @param  new_state (TRUE or FALSE).
-  * @retval none.
+  * @retval none
   */
-void i2c_slave_data_ctrl_enable(i2c_type *i2c_x, confirm_state new_state)
+void i2c_addr10_mode_enable(i2c_type *i2c_x, confirm_state new_state)
 {
-  i2c_x->ctrl2_bit.slvdcen  = new_state;
+  i2c_x->ctrl2_bit.addr10en = new_state;
+}
+
+/**
+  * @brief  enable or disable bus timeout.
+  * @param  i2c_x: to select the i2c peripheral.
+  *         this parameter can be one of the following values:
+  *         I2C1, I2C2.
+  * @param  new_state (TRUE or FALSE).
+  * @retval none
+  */
+void i2c_timeout_enable(i2c_type *i2c_x, confirm_state new_state)
+{
+  i2c_x->ctrl2_bit.timouten = new_state;
 }
 
 /**
@@ -269,29 +310,16 @@ void i2c_stop_generate(i2c_type *i2c_x)
 }
 
 /**
-  * @brief  enable or disable auto send stop mode.
+  * @brief  enable or disable ack.
   * @param  i2c_x: to select the i2c peripheral.
   *         this parameter can be one of the following values:
   *         I2C1, I2C2.
   * @param  new_state (TRUE or FALSE).
   * @retval none.
   */
-void i2c_auto_stop_enable(i2c_type *i2c_x, confirm_state new_state)
+void i2c_ack_enable(i2c_type *i2c_x, confirm_state new_state)
 {
-  i2c_x->ctrl2_bit.astopen  = new_state;
-}
-
-/**
-  * @brief  enable or disable extend bus timeout.
-  * @param  i2c_x: to select the i2c peripheral.
-  *         this parameter can be one of the following values:
-  *         I2C1, I2C2.
-  * @param  new_state (TRUE or FALSE).
-  * @retval none
-  */
-void i2c_ext_timeout_enable(i2c_type *i2c_x, confirm_state new_state)
-{
-  i2c_x->ctrl2_bit.timouten = new_state;
+  i2c_x->ctrl2_bit.nacken  = (!new_state);
 }
 
 /**
@@ -314,6 +342,8 @@ void i2c_cnt_set(i2c_type *i2c_x, uint8_t cnt)
   *         I2C1, I2C2.
   * @param  i2c_int: interrupts sources.
   *         this parameter can be one of the following values:
+  *         - I2C_TxDITEN: transmit data interrupt.
+  *         - I2C_RxDITEN: receive data interrupt.
   *         - I2C_ERRITEN: bus error interrupt.
   *         - I2C_EVTITEN: bus event interrupt.
   *         - I2C_BUFITEN: bus buffer interrupt.
@@ -332,7 +362,6 @@ void i2c_interrupt_enable(i2c_type *i2c_x, uint32_t source, confirm_state new_st
   }
 }
 
-
 /**
   * @brief  get interrupt status
   * @param  i2c_x: to select the i2c peripheral.
@@ -340,6 +369,8 @@ void i2c_interrupt_enable(i2c_type *i2c_x, uint32_t source, confirm_state new_st
   *         I2C1, I2C2.
   * @param  source
   *         this parameter can be one of the following values:
+  *         - I2C_TxDITEN: transmit data interrupt.
+  *         - I2C_RxDITEN: receive data interrupt.
   *         - I2C_ERRITEN: bus error interrupt.
   *         - I2C_EVTITEN: bus event interrupt.
   *         - I2C_BUFITEN: bus buffer interrupt.
@@ -356,7 +387,6 @@ flag_status i2c_interrupt_get(i2c_type *i2c_x, uint16_t source)
     return I2C_RESET;
   }
 }
-
 
 /**
   * @brief  config i2c own address 1.
@@ -431,80 +461,17 @@ uint8_t i2c_data_receive(i2c_type *i2c_x)
 }
 
 /**
-  * @brief  get interrupt status flag.
-  * @param  i2c_x: to select the i2c peripheral.
-  *         this parameter can be one of the following values:
-  *         I2C1, I2C2.
-  * @param  flag: specifies the flag to check.
-  *         this parameter can be one of the following values:
-  *         - I2C_SB_EVT: Start bit event flag (master mode)
-  *         - I2C_ADDR_EVT: Address sent event (master mode)/matched event flag (slave mode)
-  *         - I2C_ADDR10_EVT: 10-bit address header sent event flag (master mode)
-  *         - I2C_DBTF_EVT: Data byte transfer finish event flag
-  *         - I2C_STOPF_EVT: STOP detection event flag (slave mode)
-  *         - I2C_RXNE_EVT: Rx data register not empty event
-  *         - I2C_TXE_EVT: Tx data register empty event
-
-  *         - I2C_BERR_ERR: Bus error flag
-  *         - I2C_ARLO_ERR: Arbitration lost error flag (master mode)
-  *         - I2C_AF_ERR: Acknowledge failure flag
-  *         - I2C_OVR_ERR: Overrun/Underrun error flag
-  *         - I2C_TIMEOUT_ERR: Timeout error flag
-  * @retval the new state of flag (SET or RESET).
-  */
-flag_status i2c_flag_get(i2c_type *i2c_x, uint32_t flag)
-{
-  if((i2c_x->sr1 & flag) != I2C_RESET)
-  {
-    return I2C_SET;
-  }
-  else
-  {
-    return I2C_RESET;
-  }
-}
-
-/**
-  * @brief  clear event/error flag status
-  * @param  i2c_x: to select the i2c peripheral.
-  *         this parameter can be one of the following values:
-  *         I2C1, I2C2.
-  * @param  flag: specifies the flag to clear.
-  *         this parameter can be one of the following values:
-  *         - I2C_SB_EVT: Start bit event flag (master mode)
-  *         - I2C_ADDR_EVT: Address sent event (master mode)/matched event flag (slave mode)
-  *         - I2C_ADDR10_EVT: 10-bit address header sent event flag (master mode)
-  *         - I2C_DBTF_EVT: Data byte transfer finish event flag
-  *         - I2C_STOPF_EVT: STOP detection event flag (slave mode)
-  *         - I2C_RXNE_EVT: Rx data register not empty event
-  *         - I2C_TXE_EVT: Tx data register empty event
-
-  *         - I2C_BERR_ERR: Bus error flag
-  *         - I2C_ARLO_ERR: Arbitration lost error flag (master mode)
-  *         - I2C_AF_ERR: Acknowledge failure flag
-  *         - I2C_OVR_ERR: Overrun/Underrun error flag
-  *         - I2C_TIMEOUT_ERR: Timeout error flag
-  * @retval none
-  */
-//void i2c_flag_clear(i2c_type *i2c_x, uint32_t flag)
-//{
-//	uint32_t sr1_tmp;
-//	sr1_tmp = i2c_x->sr1;
-//  sr1_tmp &= ~flag;
-//	i2c_x->sr1 = sr1_tmp;
-//	
-//}
-
-/**
-  * @brief  get the i2c master/slave mode.
+  * @brief  Get i2c is master or slave mode
   * @param  i2c_x: to select the i2c peripheral.
   *         this parameter can be one of the following values:
   *         I2C1, I2C2, I2C3.
-  * @retval the value of the master/slave direction
+  * @retval the value of the slave direction
+  *         - I2C_SLAVE_MODE: I2C is slave mode.
+  *         - I2C_MASTER_MODE: I2C is master mode.
   */
-i2c_msm_mode_type i2c_ms_mode_get(i2c_type *i2c_x)
+i2c_msm_mode_type i2c_msm_mode_get(i2c_type *i2c_x)
 {
-  if (i2c_x->sr2_bit.msm == 0)
+  if (i2c_x->sr_bit.msm == 0)
   {
     return I2C_SLAVE_MODE;
   }
@@ -525,7 +492,7 @@ i2c_msm_mode_type i2c_ms_mode_get(i2c_type *i2c_x)
   */
 i2c_transfer_dir_type i2c_transfer_dir_get(i2c_type *i2c_x)
 {
-  if (i2c_x->sr2_bit.trm == 0)
+  if (i2c_x->sr_bit.trm == 0)
   {
     return I2C_DIR_TRANSMIT;
   }
@@ -536,88 +503,107 @@ i2c_transfer_dir_type i2c_transfer_dir_get(i2c_type *i2c_x)
 }
 
 /**
-  * @brief  get the i2c busy status
+  * @brief  get flag status.
   * @param  i2c_x: to select the i2c peripheral.
   *         this parameter can be one of the following values:
-  *         I2C1, I2C2, I2C3.
-  * @retval the value of the busy status
+  *         I2C1, I2C2.
+  * @param  flag: specifies the flag to check.
+  *         this parameter can be one of the following values:
+  *         - I2C_SB_EVT: Start bit event flag (master mode).
+  *         - I2C_STOPF_EVT:STOP detection event flag (slave mode).       
+  *         - I2C_BUSY_EVT: Bus busy event.
+  *         - I2C_GCAR_EVT: General call address receive event(slave mode) flag.
+  * 
+  *         - I2C_TXE_EVT: Tx data register empty event.
+  *         - I2C_RXNE_EVT: Rx data register not empty event.
+  *         - I2C_TXIT_EVT: Transmit data interrupt event.
+  *         - I2C_TDC_EVT: Transfer data complete event.
+  *         - I2C_TDRLD_EVT: Transmission is complete, waiting to load data.
+  *         - I2C_ADDR_EVT: Address sent event (master mode)/matched event flag (slave mode).
+  * 
+  *         - I2C_AF_ERR: Acknowledge failure flag.
+  *         - I2C_BUSERR_ERR: Bus error flag.
+  *         - I2C_ARLO_ERR: Arbitration lost error flag (master mode).
+  *         - I2C_OVR_ERR: Overrun/Underrun error flag.
+  *         - I2C_TIMEOUT_ERR: Timeout error flag.
+  * 
+  * @retval the new state of flag (SET or RESET).
   */
-i2c_busy_type i2c_busy_get(i2c_type *i2c_x)
+flag_status i2c_flag_get(i2c_type *i2c_x, uint32_t flag)
 {
-  if (i2c_x->sr2_bit.busy == 0)
+  if((i2c_x->sr & flag) != I2C_RESET)
   {
-    return I2C_NONE_BUSY;
+    return I2C_SET;
   }
   else
   {
-    return I2C_BUSY;
+    return I2C_RESET;
   }
 }
 
 /**
-  * @brief  get the i2c general call status
+  * @brief  get the i2c slave matched address.
   * @param  i2c_x: to select the i2c peripheral.
   *         this parameter can be one of the following values:
-  *         I2C1, I2C2, I2C3.
-  * @retval the value of the bgeneral call status
+  *         I2C1, I2C2.
+  * @retval slave matched address.
   */
-i2c_gca_type i2c_gca_get(i2c_type *i2c_x)
+uint8_t i2c_matched_addr_get(i2c_type *i2c_x)
 {
-  if (i2c_x->sr2_bit.gca == 0)
-  {
-    return I2C_NO_GENCALL;
-  }
-  else
-  {
-    return I2C_RECEIVE_GENCALL;
-  }
+  return (i2c_x->sr_bit.saddrm << 1);
 }
 
 /**
-  * @brief  slave get the i2c received address matched with addr1 or addr2
+  * @brief  clear flag status
   * @param  i2c_x: to select the i2c peripheral.
   *         this parameter can be one of the following values:
-  *         I2C1, I2C2, I2C3.
-  * @retval the value that received address matched with addr1 or addr2
-  */
-i2c_addrf_type i2c_addrf_get(i2c_type *i2c_x)
-{
-  if (i2c_x->sr2_bit.addrf == 0)
-  {
-    return I2C_MATCH_ADDR1;
-  }
-  else
-  {
-    return I2C_MATCH_ADDR2;
-  }
-}
-
-/**
-  * @brief  Set i2c clock 
-  * @param  i2c_x: to select the i2c peripheral.
-  *         this parameter can be one of the following values:
-  *         I2C1, I2C2, I2C3.
-  * @param  mode: Speed mode
-  *         0b00 : Standard speed (100 kHz max.)
-  *         0b01 : Fast speed (400 kHz max.)
-  *         0b10 : Fast speed plus (1 MHz max.)
-  *         0b11 : Not allowed
-  * @param  pclk: I2C Peripheral clock frequency
-  *         0b00000 / 0b00001 / Higher than 0b101010 : Not allowed
-  *         0b00010 : 2 MHz
-  *         …
-  *         0b110010 : 50 MHz
-  * @param  ccr: Clock control register in each speed mode
+  *         I2C1, I2C2.
+  * @param  flag: specifies the flag to clear.
+  *         this parameter can be any combination of the following values:
+  *         - I2C_SB_EVT: Start bit event flag (master mode).
+  *         - I2C_STOPF_EVT:STOP detection event flag (slave mode).       
+  *         - I2C_BUSY_EVT: Bus busy event.
+  *         - I2C_ADDR_EVT: Address sent event (master mode)/matched event flag (slave mode).
+  * 
+  *         - I2C_AF_ERR: Acknowledge failure flag.
+  *         - I2C_BUSERR_ERR: Bus error flag.
+  *         - I2C_ARLO_ERR: Arbitration lost error flag (master mode).
+  *         - I2C_OVR_ERR: Overrun/Underrun error flag.
+  *         - I2C_TIMEOUT_ERR: Timeout error flag.
   * @retval none
   */
-void i2c_clk_set(i2c_type *i2c_x, uint8_t mode, uint32_t pclk,  uint32_t ccr)
+void i2c_flag_clear(i2c_type *i2c_x, uint32_t flag)
 {
-  i2c_x->clkctrl_bit.spdm = mode;
+  i2c_x->clr |= flag;
+}
 
-  i2c_x->clkctrl_bit.freq = pclk;
+/**
+  * @brief  config the i2c bus timeout.
+  * @param  i2c_x: to select the i2c peripheral.
+  *         this parameter can be one of the following values:
+  *         I2C1, I2C2.
+  * @param  timeout: timeout (0x0000~0x0FFF).
+  * @retval none
+  */
+void i2c_timeout_time_set(i2c_type *i2c_x, uint16_t timeout)
+{
+  i2c_x->tmr_bit.tmotime = timeout;
+}
 
-  i2c_x->clkctrl_bit.ccr = ccr;
-
+/**
+  * @brief  config the bus timeout detcet level.
+  * @param  i2c_x: to select the i2c peripheral.
+  *         this parameter can be one of the following values:
+  *         I2C1, I2C2.
+  * @param  level
+  *         this parameter can be one of the following values:
+  *         - I2C_TIMEOUT_DETCET_HIGH: detect high level timeout.
+  *         - I2C_TIMEOUT_DETCET_LOW: detect low level timeout.
+  * @retval none
+  */
+void i2c_timeout_mode_set(i2c_type *i2c_x, i2c_timeout_detcet_type mode)
+{
+  i2c_x->tmr_bit.tmomode = mode;
 }
 
 /**
@@ -643,14 +629,18 @@ void i2c_transmit_set(i2c_type *i2c_x, uint16_t address, uint8_t cnt, i2c_reload
 {
   uint32_t temp;
 
+  /* Set rlden, astopen*/
+  i2c_x->ctrl1 |= rld_stop;
+
   /* copy ctrl2 value to temp */
   temp = i2c_x->ctrl2;
 
   /* clear ctrl2_bit specific bits */
-  temp &= ~0x03FF67FF;
+  /* ~0xFF67FF => Reset saddr, mdir, startgen, stopgen, dcnt */
+  temp &= ~0x00FF67FF; 
 
   /* transfer mode and address set */
-  temp |= address | rld_stop | start;
+  temp |= address | start;
 
   /* transfer counter set */
   temp |= (uint32_t)cnt << 16;
