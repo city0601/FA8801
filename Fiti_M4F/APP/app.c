@@ -440,7 +440,7 @@ void i2c_app(void)
 	}
 	
 	//Enable I2C interrupt
-	InitTypeDef_NVIC.NVIC_IRQChannel = I2C_IRQn;
+  // InitTypeDef_NVIC.NVIC_IRQChannel = I2C_IRQn;
   InitTypeDef_NVIC.NVIC_IRQChannelPreemptionPriority = 1;
   InitTypeDef_NVIC.NVIC_IRQChannelSubPriority = 1;
   InitTypeDef_NVIC.NVIC_IRQChannelCmd = ENABLE;
@@ -491,8 +491,51 @@ void I2C_Handler(void)
 	I2C->CR = I2C_CMD_IACK;//Clear the Interrupt Flag
 }
 
-#endif
+#define MASTER_BOARD
+#define I2C_TIMEOUT                      0xFFFFFFF
+#define I2Cx_ADDRESS                     0xA0
+#define BUF_SIZE                         8
+
+i2c_handle_type hi2cx;
+uint8_t tx_buf[BUF_SIZE] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08};
+uint8_t rx_buf[BUF_SIZE] = {0};
+
 /******************************** i2c application ***************************/
+int i2c_app_test_polling(void)
+{
+  hi2cx.i2cx = I2C1;
+  /* i2c config */
+  i2c_config(&hi2cx);
+  while(1)
+  {
+#if defined (MASTER_BOARD)
+ 	i2c_master_transmit(&hi2cx, I2Cx_ADDRESS, tx_buf, BUF_SIZE, I2C_TIMEOUT);
+	i2c_master_receive(&hi2cx, I2Cx_ADDRESS, rx_buf, BUF_SIZE, I2C_TIMEOUT);
+#else
+	i2c_slave_receive(&hi2cx, rx_buf, BUF_SIZE, I2C_TIMEOUT);
+	i2c_slave_transmit(&hi2cx, tx_buf, BUF_SIZE, I2C_TIMEOUT);
+#endif
+  }
+}
+
+int i2c_app_test_int(void)
+{
+  hi2cx.i2cx = I2C1;
+  /* i2c config */
+  i2c_config(&hi2cx);
+  while(1)
+  {
+#if defined (MASTER_BOARD)
+	i2c_master_transmit_int(&hi2cx, I2Cx_ADDRESS, tx_buf, BUF_SIZE, I2C_TIMEOUT);
+	i2c_master_receive_int(&hi2cx, I2Cx_ADDRESS, rx_buf, BUF_SIZE, I2C_TIMEOUT);
+#else
+	i2c_slave_receive_int(&hi2cx, rx_buf, BUF_SIZE, I2C_TIMEOUT);
+	i2c_slave_transmit_int(&hi2cx, tx_buf, BUF_SIZE, I2C_TIMEOUT);
+#endif
+  }
+}
+
+#endif
 
 /******************************** keyscan application ***************************/
 #ifdef KEYSCAN_APP

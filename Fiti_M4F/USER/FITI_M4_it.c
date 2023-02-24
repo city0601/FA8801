@@ -195,13 +195,44 @@ void GPIO0_Handler(void)
 //}
 
 /**
-  * @brief  This function handles I2C interrupt request.
+  * @brief  this function handles dma interrupt request.
   * @param  none
   * @retval none
   */
-//void I2C_Handler(void)
-//{
-//}
+void I2Cx_DMA_RX_IRQHandler(void)
+{
+  i2c_dma_rx_irq_handler(&hi2cx);
+}
+
+/**
+  * @brief  this function handles dma interrupt request.
+  * @param  none
+  * @retval none
+  */
+void I2Cx_DMA_TX_IRQHandler(void)
+{
+  i2c_dma_tx_irq_handler(&hi2cx);
+}
+
+/**
+  * @brief  this function handles i2c event interrupt request.
+  * @param  none
+  * @retval none
+  */
+void I2Cx_EVT_IRQHandler(void)
+{
+  i2c_evt_irq_handler(&hi2cx);
+}
+
+/**
+  * @brief  this function handles i2c error interrupt request.
+  * @param  none
+  * @retval none
+  */
+void I2Cx_ERR_IRQHandler(void)
+{
+  i2c_err_irq_handler(&hi2cx);
+}
 
 /**
   * @brief  This function handles Ethernet interrupt request.

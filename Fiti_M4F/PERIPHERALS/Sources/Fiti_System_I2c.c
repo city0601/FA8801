@@ -518,7 +518,7 @@ i2c_transfer_dir_type i2c_transfer_dir_get(i2c_type *i2c_x)
   *         - I2C_RXNE_EVT: Rx data register not empty event.
   *         - I2C_TXIT_EVT: Transmit data interrupt event.
   *         - I2C_TDC_EVT: Transfer data complete event.
-  *         - I2C_TDRLD_EVT: Transmission is complete, waiting to load data.
+  *         - I2C_TCRLD_EVT: Transmission is complete, waiting to load data.
   *         - I2C_ADDR_EVT: Address sent event (master mode)/matched event flag (slave mode).
   * 
   *         - I2C_AF_ERR: Acknowledge failure flag.

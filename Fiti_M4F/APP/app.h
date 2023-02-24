@@ -19,6 +19,9 @@
 #include "FITI_M4.h"
 #include <stdio.h>
 
+#include "Fiti_System_I2c_Middleware.h"
+#include "Fiti_System_I2c.h"
+
 //ahb2 extension
 #ifdef AHB2_EXT_APP
 

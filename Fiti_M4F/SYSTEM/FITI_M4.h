@@ -83,6 +83,9 @@ typedef enum
 }ErrorStatus;
 
 /* Need tot merge */
+#define I2C1_BASE                        (0x40003400)
+#define I2C2_BASE                        (0x40003800)
+
 typedef enum 
 {
   I2C_RESET = 0x00, 

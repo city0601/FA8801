@@ -73,14 +73,14 @@ extern "C" {
 // #define  I2C_TRM_STATUS                  ((uint32_t)0x00000002) /*!< Transmitted or received mode (Not trigger interrupt) */
 #define  I2C_SB_EVT                      ((uint32_t)0x00000004) /*!< Start bit event flag (master mode) */
 #define  I2C_STOPF_EVT                   ((uint32_t)0x00000008) /*!< STOP detection event flag (slave mode) */
-#define  I2C_BUSY_EVT                    ((uint32_t)0x00000010) /*!< Bus busy event */
+// #define  I2C_BUSY_EVT                    ((uint32_t)0x00000010) /*!< Bus busy event */
 #define  I2C_GCAR_EVT                    ((uint32_t)0x00000020) /*!< General call address receive event(slave mode) flag */
 
 #define  I2C_TXE_EVT                     ((uint32_t)0x00000100) /*!< Tx data register empty event */
 #define  I2C_RXNE_EVT                    ((uint32_t)0x00000200) /*!< Rx data register not empty event */
 #define  I2C_TXIT_EVT                    ((uint32_t)0x00000400) /*!< Transmit data interrupt event */
 #define  I2C_TDC_EVT                     ((uint32_t)0x00000800) /*!< Transfer data complete event */
-#define  I2C_TDRLD_EVT                   ((uint32_t)0x00001000) /*!< Transmission is complete, waiting to load data */
+#define  I2C_TCRLD_EVT                   ((uint32_t)0x00001000) /*!< Transmission is complete, waiting to load data */
 
 #define  I2C_AF_ERR                      ((uint32_t)0x00010000) /*!< Acknowledge failure flag */
 #define  I2C_BUSERR_ERR                  ((uint32_t)0x00020000) /*!< Bus error flag */
@@ -190,7 +190,7 @@ typedef struct
       __IO uint32_t rlden                : 1; /* [13] RLDEN : Reload function (Rx/Tx over 255 byte data) enable */
       __IO uint32_t astopen              : 1; /* [14] ASTOPEN : Automatically send STOP condition */
       __IO uint32_t swrst                : 1; /* [15] SWRST : Software reset, which can release I2C from error/locked state */
-      __IO uint32_t reserved2            : 22; /* [31:16] Reserved */
+      __IO uint32_t reserved2            : 16; /* [31:16] Reserved */
     } ctrl1_bit;
   };
 
@@ -294,10 +294,10 @@ typedef struct
       __I uint32_t ovr                   : 1; /* [19] OVR : Overrun/Underrun error */
       __I uint32_t timeout               : 1; /* [20] TIMEOUT: Timeout error */
       __I uint32_t addrevt               : 1; /* [21] ADDREVT : Address sent event (master mode)/matched event(slave mode) */
-      __I uint32_t reserved3             : 19;/* [23:22] Reserved */
+      __I uint32_t reserved3             : 2;/* [23:22] Reserved */
 
       __I uint32_t addrselm              : 1; /* [24] ADDREVT : ADDR select flag, match ADDR1/2 (slave mode) */
-      __I uint32_t saddrm                : 1; /* [31:25] SADDRM : Slave address matching value */
+      __I uint32_t saddrm                : 7; /* [31:25] SADDRM : Slave address matching value */
     } sr_bit;
   };
 
@@ -343,7 +343,7 @@ typedef struct
       __IO uint32_t sclhvt               : 8; /* [15:8] SCLHVT: SCL high level time */
       __IO uint32_t sdadlt               : 4; /* [19:16] SDADLT: SDA output delay time */
       __IO uint32_t scldlt               : 4; /* [23:20] SCLDLT: SCL output delay time */
-      __IO uint32_t div                  : 4; /* [31:24] DIV : Clock divider value */
+      __IO uint32_t div                  : 8; /* [31:24] DIV : Clock divider value */
     } clkctrl_bit;
   };
 
@@ -357,7 +357,7 @@ typedef struct
     {
       __IO uint32_t tmotime               : 12;/* [11:0] TMOTIME : Timeout detection time */
       __IO uint32_t tmomode               : 1; /* [12] TMOMODE: Timeout detection mode */
-      __IO uint32_t reserved1             : 2; /* [31:13] Reserved */
+      __IO uint32_t reserved1             : 19; /* [31:13] Reserved */
     } tmr_bit;
   };
 

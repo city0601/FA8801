@@ -80,6 +80,7 @@
 #define I2C_START                        0
 #define I2C_END                          1
 
+#define I2Cx_CLKCTRL                     0x20C01628
 /**
   * @brief  initializes peripherals used by the i2c.
   * @param  none
@@ -87,7 +88,8 @@
   */
 __WEAK void i2c_lowlevel_init(i2c_handle_type* hi2c)
 {
-
+    /* config i2c */
+    i2c_init(hi2c->i2cx, 0x0F, I2Cx_CLKCTRL);
 }
 
 /**
@@ -181,7 +183,7 @@ i2c_status_type i2c_wait_end(i2c_handle_type* hi2c, uint32_t timeout)
   *         - I2C_RXNE_EVT: Rx data register not empty event.
   *         - I2C_TXIT_EVT: Transmit data interrupt event.
   *         - I2C_TDC_EVT: Transfer data complete event.
-  *         - I2C_TDRLD_EVT: Transmission is complete, waiting to load data.
+  *         - I2C_TCRLD_EVT: Transmission is complete, waiting to load data.
   *         - I2C_ADDR_EVT: Address sent event (master mode)/matched event flag (slave mode).
   * 
   *         - I2C_AF_ERR: Acknowledge failure flag.
@@ -331,7 +333,7 @@ i2c_status_type i2c_master_transmit(i2c_handle_type* hi2c, uint16_t address, uin
     if ((hi2c->psize == 0) && (hi2c->pcount != 0))
     {
       /* wait for the tcrld flag to be set  */
-      if (i2c_wait_flag(hi2c, I2C_TDRLD_EVT, I2C_EVENT_CHECK_ACKFAIL, timeout) != I2C_OK)
+      if (i2c_wait_flag(hi2c, I2C_TCRLD_EVT, I2C_EVENT_CHECK_ACKFAIL, timeout) != I2C_OK)
       {
         return I2C_ERR_STEP_3;
       }
@@ -480,7 +482,7 @@ i2c_status_type i2c_master_receive(i2c_handle_type* hi2c, uint16_t address, uint
     if ((hi2c->psize == 0) && (hi2c->pcount != 0))
     {
       /* wait for the tcrld flag to be set  */
-      if (i2c_wait_flag(hi2c, I2C_TDRLD_EVT, I2C_EVENT_CHECK_NONE, timeout) != I2C_OK)
+      if (i2c_wait_flag(hi2c, I2C_TCRLD_EVT, I2C_EVENT_CHECK_NONE, timeout) != I2C_OK)
       {
         return I2C_ERR_STEP_3;
       }
@@ -716,7 +718,7 @@ i2c_status_type i2c_memory_write(i2c_handle_type* hi2c, i2c_mem_address_width_ty
     if ((hi2c->psize == 0) && (hi2c->pcount != 0))
     {
       /* wait for the tcrld flag to be set  */
-      if (i2c_wait_flag(hi2c, I2C_TDRLD_EVT, I2C_EVENT_CHECK_ACKFAIL, timeout) != I2C_OK)
+      if (i2c_wait_flag(hi2c, I2C_TCRLD_EVT, I2C_EVENT_CHECK_ACKFAIL, timeout) != I2C_OK)
       {
         return I2C_ERR_STEP_5;
       }
@@ -809,7 +811,7 @@ i2c_status_type i2c_memory_read(i2c_handle_type* hi2c, i2c_mem_address_width_typ
     if ((hi2c->psize == 0) && (hi2c->pcount != 0))
     {
       /* wait for the tcrld flag to be set  */
-      if (i2c_wait_flag(hi2c, I2C_TDRLD_EVT, I2C_EVENT_CHECK_NONE, timeout) != I2C_OK)
+      if (i2c_wait_flag(hi2c, I2C_TCRLD_EVT, I2C_EVENT_CHECK_NONE, timeout) != I2C_OK)
       {
         return I2C_ERR_STEP_6;
       }
@@ -1128,7 +1130,7 @@ i2c_status_type i2c_master_irq_handler_int(i2c_handle_type* hi2c)
     hi2c->pcount--;
     hi2c->psize--;
   }
-  else if (i2c_flag_get(hi2c->i2cx, I2C_TDRLD_EVT) != RESET)
+  else if (i2c_flag_get(hi2c->i2cx, I2C_TCRLD_EVT) != RESET)
   {
     if ((hi2c->psize == 0) && (hi2c->pcount != 0))
     {
@@ -1648,7 +1650,7 @@ i2c_status_type i2c_memory_write_dma(i2c_handle_type* hi2c, i2c_mem_address_widt
   }
 
   /* wait for the tcrld flag to be set */
-  if (i2c_wait_flag(hi2c, I2C_TDRLD_EVT, I2C_EVENT_CHECK_NONE, timeout) != I2C_OK)
+  if (i2c_wait_flag(hi2c, I2C_TCRLD_EVT, I2C_EVENT_CHECK_NONE, timeout) != I2C_OK)
   {
     return I2C_ERR_STEP_4;
   }
@@ -1755,7 +1757,7 @@ i2c_status_type i2c_master_irq_handler_dma(i2c_handle_type* hi2c)
       hi2c->error_code = I2C_ERR_ACKFAIL;
     }
   }
-  else if (i2c_flag_get(hi2c->i2cx, I2C_TDRLD_EVT) != RESET)
+  else if (i2c_flag_get(hi2c->i2cx, I2C_TCRLD_EVT) != RESET)
   {
     /* disable tdc interrupt */
     i2c_interrupt_enable(hi2c->i2cx, I2C_EVTITEN, FALSE);

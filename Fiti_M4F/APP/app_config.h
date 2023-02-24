@@ -20,9 +20,9 @@
 //#define APB2_EXT_APP
 //#define DDR3_APP
 //#define ETHERNET_APP
-//#define I2C_APP
+#define I2C_APP
 //#define KEYSCAN_APP
-#define LED_APP
+//#define LED_APP
 //#define RTC_APP
 //#define SPI_APP
 //#define SPI_FLASH_APP

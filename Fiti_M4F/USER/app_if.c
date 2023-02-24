@@ -59,8 +59,11 @@ void app_call_if(void)
 
 	//i2c
 #ifdef I2C_APP
-	printf("\r\n****** I2C Application ******\r\n");
-	i2c_app();
+	// printf("\r\n****** I2C Application ******\r\n");
+	// i2c_app();
+	i2c_app_test_polling();
+	i2c_app_test_int();
+
 #endif
 
 	//keyscan
