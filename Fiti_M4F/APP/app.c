@@ -1311,4 +1311,198 @@ void TIMER0_Handler(void)
 }
 
 #endif
+
+#ifdef KEWEI_APP
+void kewei_test_app(void)
+{
+	#if 0
+	REG8(0x40006000) = 0xAA;
+	REG8(0x40006001) = 0x55;
+	REG8(0x40006002) = 0xAA;
+	REG8(0x40006003) = 0x55;
+	REG16(0x40006004) = 0x1234;
+	REG16(0x40006008) = 0x5678;
+	REG32(0x4000600C) = 0x12345678;
+	
+	if(REG8(0x40006000) != 0xAA)
+		REG8(0x40006000) = 0xAA;
+	if(REG16(0x40006004) != 0x1234)
+		REG16(0x40006004) = 0x1234;
+	if(REG32(0x4000600C) != 0x12345678)
+		REG32(0x4000600C) = 0x12345678;
+	#endif	
+#if 0
+	// NPU
+	// Write NPU SRAM
+	REG32(0x40002000) = 0x5555AAAA;
+	// Write SYS RAM
+	REG32(0x00030000) = 0xAAAA5555;
+#endif
+  // Write SYS RAM
+	REG32(0x00020000) = 0xAAAA5555;
+	// Write NPU SRAM
+	REG32(0x40001000) = 0x5555AAAA;
+}
+#endif
+
+#ifdef LOUIS_QAPI_TEST
+uint8_t test_val = 0;
+uint32_t wait_cnt = 0;
+void louis_qspi_test_app(void)
+{
+	uint16_t i = 0;
+	
+	REG32(0x50000000) = 0x00000200;
+	REG32(0x50000004) = 0x00000000;
+	REG32(0x50000008) = 0x00007301;
+	REG32(0x5000000C) = 0x00000000;
+	// SPI Write En
+	while( (REG8(0x50000014) & 0x02) == 0);
+	REG8(0x50000010) = 0x06;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	while( (REG8(0x50000014) & 0x08));		// wait busy
+	
+	// SPI Erase
+	while( (REG8(0x50000014) & 0x02) == 0);
+	REG8(0x50000010) = 0xC7;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	while( (REG8(0x50000014) & 0x08));		// wait busy
+	
+	wait_cnt = 0x1000;
+	__nop();
+	while(wait_cnt > 0)
+		wait_cnt = wait_cnt -1;
+	
+	
+	// SPI Write En
+	while( (REG8(0x50000014) & 0x02) == 0);
+	REG8(0x50000010) = 0x06;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	while( (REG8(0x50000014) & 0x08));		// wait busy
+	
+	REG32(0x50000008) = 0x00007245;
+	REG32(0x5000000C) = 0x000000FF;
+	
+	REG8(0x50000010) = 0x2;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	REG8(0x50000010) = 0x0;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	REG8(0x50000010) = 0x0;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	REG8(0x50000010) = 0x0;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	
+	// Write Bytes 256 
+	for(i = 0 ; i < 256 ; i++)
+	{
+		REG8(0x50000010) = (i+1);
+		while( (REG8(0x50000014) & 0x02) == 0);
+	}
+	
+	while( (REG8(0x50000014) & 0x08));		// wait busy
+	
+	wait_cnt = 0x1000;
+	__nop();
+	while(wait_cnt > 0)
+		wait_cnt = wait_cnt -1;
+	REG32(0x50000000) = 0x00004200;
+	REG32(0x50000004) = 0x00000000;
+	REG32(0x50000008) = 0x00087245;
+	//REG32(0x5000000C) = 0x00000000;	
+	REG8(0x50000010) = 0x0B;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	REG8(0x50000010) = 0x0;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	REG8(0x50000010) = 0x0;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	REG8(0x50000010) = 0x0;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	// Read Bytes 256 
+	for(i = 0 ; i < 256 ; i++)
+	{
+		while( (REG8(0x50000014) & 0x01) == 0);
+		test_val = REG8(0x50000010);
+	}
+	
+	while( (REG8(0x50000014) & 0x08));		// wait busy
+	// QUAD SPI Read
+	wait_cnt = 0x1000;
+	__nop();
+	while(wait_cnt > 0)
+		wait_cnt = wait_cnt -1;
+	REG32(0x50000008) = 0x000872C5;
+	REG8(0x50000010) = 0x6B;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	REG8(0x50000010) = 0x0;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	REG8(0x50000010) = 0x0;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	REG8(0x50000010) = 0x0;
+	while( (REG8(0x50000014) & 0x02) == 0);
+	// Read Bytes 256 
+	for(i = 0 ; i < 256 ; i++)
+	{
+		while( (REG8(0x50000014) & 0x01) == 0);
+		test_val = REG8(0x50000010);
+	}
+}
+#endif
+
+#ifdef DMA_TEST
+/* --------------------------------------------------------------- */
+/*  Simple software DMA test                                       */
+/* --------------------------------------------------------------- */
+int cnum = 1;
+volatile unsigned int source_data_array[4];  /* Data array for memory DMA test */
+volatile unsigned int dest_data_array[4];    /* Data array for memory DMA test */
+int dma_simple_test(void)
+{
+  int return_val=0;
+  int err_code=0;
+  int i;
+  unsigned int current_state;
+
+
+  //printf("uDMA simple test");
+  DMA->CHNL_ENABLE_SET = (1<<cnum); /* Enable channel 0 */
+
+  /* setup data for DMA */
+  for (i=0;i<4;i++) {
+    source_data_array[i] = i;
+    dest_data_array[i]   = 0;
+  }
+	
+  dma_memory_copy (cnum, (unsigned int) &source_data_array[0],(unsigned int) &dest_data_array[0], 2, 4);
+  do { /* Wait until PL230 DMA controller return to idle state */
+    current_state = (DMA->DMA_STATUS >> 4)  & 0xF;
+  } while (current_state!=0);
+
+  for (i=0;i<4;i++) 
+  {
+    /* Debugging printf: */
+    /*printf (" - dest[i] = %x\n", dest_data_array[i]);*/
+    if (dest_data_array[i]!= source_data_array[i])
+    {
+      //printf ("ERROR:dest_data_array[%d], expected %x, actual %x\n", i, source_data_array[i], dest_data_array[i]);
+      err_code |= (1<<i);
+    }
+  }
+
+  /* Generate return value */
+  if (err_code != 0) {
+    //printf ("ERROR : simple DMA failed (0x%x)\n", err_code);
+    return_val=1;
+  } else {
+    //printf ("-Passed");
+  }
+
+  return(return_val);
+}
+void dma_test_app(void)
+{
+	dma_data_struct_init();
+	dma_init();
+	dma_simple_test();
+}
+#endif
 /******************************** nvic application ***************************/

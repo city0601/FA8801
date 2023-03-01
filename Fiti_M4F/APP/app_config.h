@@ -22,7 +22,7 @@
 //#define ETHERNET_APP
 //#define I2C_APP
 //#define KEYSCAN_APP
-#define LED_APP
+//#define LED_APP
 //#define RTC_APP
 //#define SPI_APP
 //#define SPI_FLASH_APP
@@ -31,5 +31,7 @@
 //#define UART0_IRQ_APP
 //#define WATCHDOG_APP
 //#define NVIC_APP
-
+#define KEWEI_APP
+//#define LOUIS_QAPI_TEST
+//#define DMA_TEST
 #endif

@@ -21,5 +21,4 @@
 /* Declarations ------------------------------------------------------------------*/
 extern void UartInit(uint32_t baudrate);
 extern void app_call_if(void);
-
 #endif

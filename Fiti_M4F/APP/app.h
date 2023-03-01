@@ -154,4 +154,15 @@ extern void rtc_app(void);
 extern void nvic_app(void);
 #endif
 
+#ifdef KEWEI_APP
+extern void kewei_test_app(void);
+#endif
+
+#ifdef LOUIS_QAPI_TEST
+extern void louis_qspi_test_app(void);
+#endif
+
+#ifdef DMA_TEST
+extern void dma_test_app(void);
+#endif
 #endif

@@ -17,6 +17,7 @@
 
 void UartInit(uint32_t baudrate)
 {
+	#if 0
 	UART_InitTypeDef UART_InitStruct;
 
 	UART_InitStruct.UART_Mode.UARTMode_Tx = ENABLE;
@@ -29,6 +30,7 @@ void UartInit(uint32_t baudrate)
 	UART_InitStruct.UART_BaudRate = baudrate;//Baud Rate
 
 	UART_Init(UART0,&UART_InitStruct);
+	#endif
 }
 
 void app_call_if(void)
@@ -121,5 +123,17 @@ void app_call_if(void)
 #ifdef NVIC_APP
   printf("\r\n****** NVIC Application ******\r\n");
 	nvic_app();
+#endif
+
+#ifdef KEWEI_APP
+	kewei_test_app();
+#endif
+
+#ifdef LOUIS_QAPI_TEST
+	louis_qspi_test_app();
+#endif
+
+#ifdef DMA_TEST
+	dma_test_app();
 #endif
 }

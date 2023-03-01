@@ -30,7 +30,6 @@ int fputc(int ch, FILE *f)
 {
 	UART_SendChar(UART0, (uint8_t) ch);
 	while(UART0->STATE & UART_STATE_TXBF);//UART0
-	
 	return (ch);
 }
 
